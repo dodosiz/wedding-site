@@ -4,8 +4,8 @@ import styles from "./section.module.css";
 
 export interface SectionProps {
   id: string;
-  color: string;
   children?: React.ReactNode;
+  fixedHeight?: boolean;
   setActiveNav: (n: string) => void;
 }
 
@@ -26,8 +26,7 @@ export function Section(props: SectionProps) {
   return (
     <section
       id={props.id}
-      className={styles.base_section}
-      style={{ backgroundColor: props.color }}
+      className={props.fixedHeight ? styles.fixed_height : styles.base_section}
     >
       {props.children}
     </section>
