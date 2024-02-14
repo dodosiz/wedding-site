@@ -1,5 +1,4 @@
 "use client";
-import { useEffect, useState } from "react";
 import styles from "./navigationBar.module.css";
 
 interface Item {
@@ -14,17 +13,6 @@ interface NavigationBarProps {
 }
 
 export function NavigationBar(props: NavigationBarProps) {
-  const [scrolled, setScrolled] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [props]);
-
   const handleClick = (link: string) => {
     const element = document.getElementById(link);
     if (element) {
@@ -32,12 +20,8 @@ export function NavigationBar(props: NavigationBarProps) {
     }
   };
   return (
-    <nav>
-      <ul
-        className={`${styles.navigation_menu} ${
-          scrolled ? styles.scrolled : undefined
-        }`}
-      >
+    <nav className={styles.navigation_bar}>
+      <ul className={styles.navigation_menu}>
         {props.items.map((i) => (
           <li
             key={i.link}

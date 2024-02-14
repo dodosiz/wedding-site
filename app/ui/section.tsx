@@ -5,6 +5,7 @@ import styles from "./section.module.css";
 export interface SectionProps {
   id: string;
   color: string;
+  children?: React.ReactNode;
   setActiveNav: (n: string) => void;
 }
 
@@ -27,6 +28,8 @@ export function Section(props: SectionProps) {
       id={props.id}
       className={styles.base_section}
       style={{ backgroundColor: props.color }}
-    ></section>
+    >
+      {props.children}
+    </section>
   );
 }
