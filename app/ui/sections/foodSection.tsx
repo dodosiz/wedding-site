@@ -8,7 +8,7 @@ export function FoodSection() {
     <div className={styles.grid_container}>
         <div></div>
         <div className={styles.flex_container_left}>
-            <Image className={styles.food_image} width={380} height={600} alt="eating outside" src="/food4.JPG" />
+            <Image className={styles.food_image} width={380} height={600} alt="eating outside" src="/food4.jpg" />
         </div>
         <div className={styles.flex_container_right}>
             <Image className={styles.food_image} width={600} height={390} alt="table with rose wine" src="/food1.JPG" />

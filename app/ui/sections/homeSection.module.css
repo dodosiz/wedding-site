@@ -32,20 +32,66 @@
   padding: 2vw;
 }
 
-.artemis_background {
-  background: url("/artemis_car2.jpg");
+.home_background0 {
+  background: url("/carousel/home_background0.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 100%;
-  transition: all 1.5s ease-out;
 }
 
-.artemis_background.transition {
-  background: url("/artemis_car.jpg");
+.home_background1 {
+  background: url("/carousel/home_background1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 100%;
-  transition: all 1.5s ease-out;
+}
+
+.home_background2 {
+  background: url("/carousel/home_background2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.home_background3 {
+  background: url("/carousel/home_background3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.home_background4 {
+  background: url("/carousel/home_background4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.home_background5 {
+  background: url("/carousel/home_background5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.home_background6 {
+  background: url("/carousel/home_background6.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+.home_background7 {
+  background: url("/carousel/home_background7.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
 }
