@@ -1,8 +1,28 @@
-.home_container {
+.home_background_container {
   width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 3fr;
+  height: 800px;
+}
+
+.home_text_container {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.save_the_date {
+  font-size: 2.5em;
+}
+
+.date_heading {
+  font-size: 1.5em;
+}
+
+.location_heading {
+  font-size: 1.2em;
 }
 
 .white_background {
@@ -13,8 +33,19 @@
 }
 
 .artemis_background {
+  background: url("/artemis_car2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  transition: all 1.5s ease-out;
+}
+
+.artemis_background.transition {
   background: url("/artemis_car.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  height: 100%;
+  transition: all 1.5s ease-out;
 }

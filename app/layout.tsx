@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Inter, IBM_Plex_Sans } from "next/font/google";
+import { Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
-const ibm = IBM_Plex_Sans({ subsets: ["latin", "greek"], weight: "400" });
+const sans = Source_Sans_3({subsets: ["latin", "greek"]})
 
 export const metadata: Metadata = {
   title: "Theo + Natalia",
@@ -17,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={ibm.className}>{children}</body>
+      <body className={sans.className}>{children}</body>
     </html>
   );
 }

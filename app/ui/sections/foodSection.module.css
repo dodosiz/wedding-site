@@ -1,0 +1,33 @@
+.grid_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.suggestions_grid_container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    padding: 20px;
+}
+
+.flex_container_left {
+    display: flex;
+    justify-content: end;
+    padding-top: 100px;
+}
+
+.flex_container_right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.food_image {
+    border-radius: 10px;
+}
+
+.side_gif {
+    display: flex;
+    justify-content: end;
+}

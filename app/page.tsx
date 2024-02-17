@@ -6,6 +6,7 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import { HomeSection } from "./ui/sections/homeSection";
 import { LocationSection } from "./ui/sections/locationSection";
+import { FoodSection } from "./ui/sections/foodSection";
 
 export default function Home() {
   const [active, setActive] = useState("home");
@@ -18,11 +19,13 @@ export default function Home() {
           { text: "Αρχική", link: "home" },
           { text: "Τοποθεσία", link: "location" },
           { text: "Διαμονή", link: "accomondation" },
+          { text: "Φαγητό", link: "food" },
+          { text: "Αξιοθέατα", link: "attractions" },
           { text: "Μετάβαση", link: "getThere" },
         ]}
       />
       <main>
-        <Section id="home" setActiveNav={setActive} fixedHeight>
+        <Section id="home" setActiveNav={setActive}>
           <HomeSection />
         </Section>
         <Section id="location" setActiveNav={setActive}>
@@ -32,6 +35,18 @@ export default function Home() {
           <div
             style={{
               backgroundColor: "aquamarine",
+              width: "100%",
+              height: "100%",
+            }}
+          ></div>
+        </Section>
+        <Section id="food" setActiveNav={setActive}>
+          <FoodSection />
+        </Section>
+        <Section id="attractions" setActiveNav={setActive} fixedHeight>
+          <div
+            style={{
+              backgroundColor: "royalblue",
               width: "100%",
               height: "100%",
             }}
