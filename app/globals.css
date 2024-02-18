@@ -18,3 +18,13 @@ ul {
   list-style: circle;
   padding: 0;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}

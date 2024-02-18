@@ -1,14 +1,14 @@
 .grid_container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
-    padding: 20px;
+    padding: 20px 10%;
 }
 
 .suggestions_grid_container {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr 1fr;
-    padding: 20px;
+    grid-template-columns: 2fr 1fr;
+    padding: 20px 20%;
 }
 
 .flex_container_left {

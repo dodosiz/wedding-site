@@ -25,6 +25,7 @@
 .arrow:hover {
   background-color: rgba(0, 0, 0, 0.3);
   font-weight: bolder;
+  cursor: pointer;
 }
 
 .arrow.right {

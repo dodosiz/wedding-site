@@ -1,0 +1,13 @@
+.location_section {
+    background-color: #f7f5ed;
+}
+
+.hotels_grid_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 5% 20%;
+}
+
+.accomondation_image {
+    border-radius: 10px;
+}

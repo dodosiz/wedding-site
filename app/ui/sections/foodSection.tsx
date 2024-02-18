@@ -6,7 +6,6 @@ import { Header } from "../header";
 export function FoodSection() {
     return <>
     <div className={styles.grid_container}>
-        <div></div>
         <div className={styles.flex_container_left}>
             <Image className={styles.food_image} width={380} height={600} alt="eating outside" src="/food4.jpg" />
         </div>
@@ -14,7 +13,6 @@ export function FoodSection() {
             <Image className={styles.food_image} width={600} height={390} alt="table with rose wine" src="/food1.JPG" />
             <Image className={styles.food_image} width={420} height={220} alt="table by the sea" src="/food3.JPG" />
         </div>
-        <div></div>
     </div>
     <div className={common.text_container}>
         <Header>Γευστικές περιηγήσεις</Header>
@@ -26,7 +24,6 @@ export function FoodSection() {
         </p>
     </div>
     <div className={styles.suggestions_grid_container}>
-        <div></div>
         <div>
             <h2>Ταβέρνες</h2>
             <ul>
@@ -55,7 +52,6 @@ export function FoodSection() {
         <div className={styles.side_gif}>
             <Image style={{marginTop: "100px"}} width={350} height={350} alt="Drink" src="/drink.gif" />
         </div>
-        <div></div>
     </div>
     </>
 }

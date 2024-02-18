@@ -7,6 +7,7 @@ import Image from "next/image";
 import { HomeSection } from "./ui/sections/homeSection";
 import { LocationSection } from "./ui/sections/locationSection";
 import { FoodSection } from "./ui/sections/foodSection";
+import { AccomondationSection } from "./ui/sections/accomondationSection";
 
 export default function Home() {
   const [active, setActive] = useState("home");
@@ -31,14 +32,8 @@ export default function Home() {
         <Section id="location" setActiveNav={setActive}>
           <LocationSection />
         </Section>
-        <Section id="accomondation" setActiveNav={setActive} fixedHeight>
-          <div
-            style={{
-              backgroundColor: "aquamarine",
-              width: "100%",
-              height: "100%",
-            }}
-          ></div>
+        <Section id="accomondation" setActiveNav={setActive}>
+          <AccomondationSection />
         </Section>
         <Section id="food" setActiveNav={setActive}>
           <FoodSection />
