@@ -36,11 +36,14 @@ export function FoodSection() {
       <div className={common.text_container}>
         <Header>Γευστικές περιηγήσεις</Header>
         <p>
-          Χαρακτηριστικό της Σύρου, όσον αφορά στο φαγητό, είναι το πικάντικο
-          τυρί Σα Μιχάλη, που παράγεται κυρίως στο ομώνυμο χωριό της Άνω Σύρου ,
-          στη βόρεια πλευρά του νησιού. Αν κάνετε τη βόλτα σας στα μικρά,
-          παραδοσιακά, ορεινά χωριουδάκια της περιοχής, θα ανακαλύψετε μέρη όπου
-          θα δοκιμάσετε πεντανόστιμο φαγητό!
+          Το πιο φημισμένο προϊόν του νησιού είναι το συριανό λουκούμι. Η τέχνη
+          της παρασκευής του έφτασε στη Σύρο με τους πρώτους πρόσφυγες από Χίο,
+          ενώ το έτερο συριανό προϊόν των λουκουμοποιών είναι η χαλβαδόπιτα που
+          παρασκευάζεται από θυμαρίσιο συριανό μέλι και φρεσκοψημένο αμύγδαλο. Η
+          Σύρος φημίζεται και για τα τυροκομικά της, όπως το περίφημο τυρί Σαν
+          Μιχάλη που ξεχωρίζει για τη μοναδική πικάντικη γεύση του. Στην οδό
+          Χίου θα βρείτε αρκετά μαγαζιά για να προμηθευτείτε παραδοσιακά
+          προϊόντα του νησιού.
         </p>
       </div>
       <div className={styles.suggestions_grid_container}>
@@ -63,7 +66,8 @@ export function FoodSection() {
                 target="_blank"
               >
                 Αλλού Γυαλού
-              </a>
+              </a>{" "}
+              (Σερβίρει πρωτότυπα πιάτα σε μια μεγάλη βεράντα πάνω στη θάλασσα)
             </li>
             <li>
               <a
@@ -107,6 +111,7 @@ export function FoodSection() {
               >
                 ο Μήτσος
               </a>
+              (ξακουστός αν είσαι λάτρης του κρέατος)
             </li>
             <li>
               <a
@@ -117,8 +122,42 @@ export function FoodSection() {
               </a>{" "}
               Σύρος
             </li>
+            <li>
+              <a
+                href="https://www.tripadvisor.com/Restaurant_Review-g616163-d12572083-Reviews-Avant_Garden-Hermoupolis_Syros_Cyclades_South_Aegean.html"
+                target="_blank"
+              >
+                Avant Garden
+              </a>{" "}
+              (Έξοχη, δημιουργική κουζίνα σε μια όμορφη αυλή)
+            </li>
+            <li>
+              <a
+                href="https://www.tripadvisor.com.gr/Restaurant_Review-g616163-d6851874-Reviews-Mazi-Hermoupolis_Syros_Cyclades_South_Aegean.html"
+                target="_blank"
+              >
+                Mazi
+              </a>{" "}
+              (Η πιο ωραία αυλή του νησιού)
+            </li>
+            <li>
+              <a
+                href="https://www.tripadvisor.com.gr/Restaurant_Review-g616163-d4507531-Reviews-Peri_Tinos-Hermoupolis_Syros_Cyclades_South_Aegean.html"
+                target="_blank"
+              >
+                Το Περί Τίνος
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.tripadvisor.com.gr/Restaurant_Review-g3581255-d8294485-Reviews-Apanohoritissa-Ano_Siros_Syros_Cyclades_South_Aegean.html"
+                target="_blank"
+              >
+                Η Απανοχωρίτισσα
+              </a>
+            </li>
           </ul>
-          <h2>Brunch</h2>
+          <h2>Brunch / καφέ</h2>
           <ul>
             <li>
               <a
@@ -128,6 +167,43 @@ export function FoodSection() {
                 Le Perroquet Tranquille
               </a>{" "}
               (φτιάχνουν τα ωραιότερα κροκ μαντάμ και κροκ μεσιέ)
+            </li>
+            <li>
+              <a
+                href="https://www.tripadvisor.com.gr/Restaurant_Review-g616163-d20814947-Reviews-Armadillo_Coffee_brewery-Hermoupolis_Syros_Cyclades_South_Aegean.html"
+                target="_blank"
+              >
+                Armadillo
+              </a>{" "}
+              (το brunch στη Σύρο σε μία από τις πιο ψαγμένες εκδοχές του Okio
+              Cafe Bar: το brunch στη Σύρο δίπλα στη θάλασσα)
+            </li>
+            <li>
+              <a
+                href="https://www.tripadvisor.com.gr/Restaurant_Review-g616163-d4701521-Reviews-Kouchico-Hermoupolis_Syros_Cyclades_South_Aegean.html"
+                target="_blank"
+              >
+                Kouchico
+              </a>{" "}
+              (το cocktail-bar που ξέρει κι από brunch Jar: το πιο boho brunch
+              στη Σύρο)
+            </li>
+            <li>
+              <a
+                href="https://www.tripadvisor.com.gr/Restaurant_Review-g616163-d17404805-Reviews-Plastico-Hermoupolis_Syros_Cyclades_South_Aegean.html"
+                target="_blank"
+              >
+                Plastico
+              </a>{" "}
+              (το κορυφαίο brunch στη Σύρο ξέρει (και) από τέχνη)
+            </li>
+            <li>
+              <a
+                href="https://www.tripadvisor.com.gr/Restaurant_Review-g3581255-d12437862-Reviews-Syrianon_Kafepoteio-Ano_Siros_Syros_Cyclades_South_Aegean.html"
+                target="_blank"
+              >
+                Συριανών Καφεποτείο
+              </a>
             </li>
           </ul>
           <h2>Ποτό</h2>
@@ -140,6 +216,46 @@ export function FoodSection() {
                 Theosis
               </a>{" "}
               (Τα πιο έμπειρα κοκτέιλ στη Σύρο)
+            </li>
+            <li>
+              <a
+                href="https://www.tripadvisor.com.gr/Restaurant_Review-g189435-d17734098-Reviews-Ciel-Syros_Cyclades_South_Aegean.html"
+                target="_blank"
+              >
+                Ciel
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.tripadvisor.com.gr/Restaurant_Review-g616163-d4701521-Reviews-Kouchico-Hermoupolis_Syros_Cyclades_South_Aegean.html"
+                target="_blank"
+              >
+                Kouchico
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.tripadvisor.com.gr/Attraction_Review-g616163-d12854743-Reviews-Baba_Bar-Hermoupolis_Syros_Cyclades_South_Aegean.html"
+                target="_blank"
+              >
+                Baba bar
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.tripadvisor.com.gr/Restaurant_Review-g15278394-d23993350-Reviews-Barrio-Ermoupoli_Syros_Cyclades_South_Aegean.html"
+                target="_blank"
+              >
+                Barrio
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.tripadvisor.com/Restaurant_Review-g15278394-d20935934-Reviews-Porte_Galleria_Del_Cocktail-Ermoupoli_Syros_Cyclades_South_Aegean.html"
+                target="_blank"
+              >
+                Porte Galleria del cocktail
+              </a>
             </li>
           </ul>
           <h2>Γλυκό</h2>
@@ -154,6 +270,15 @@ export function FoodSection() {
               (Τα ροδίνια είναι τα συριανά, αριστοκρατικά αμυγδαλωτά, στου
               Αθυμαρίτη φτιάχνουν την απόλυτη εκδοχή)
             </li>
+            <li>
+              <a
+                href="https://www.tripadvisor.com.gr/Restaurant_Review-g616163-d5030866-Reviews-Django_Gelato-Hermoupolis_Syros_Cyclades_South_Aegean.html"
+                target="_blank"
+              >
+                Django Gelato
+              </a>{" "}
+              (Για φρέσκο, χειροποίητο παγωτό)
+            </li>
           </ul>
         </div>
         <div className={styles.side_gif}>
@@ -165,6 +290,18 @@ export function FoodSection() {
             src="/drink.gif"
           />
         </div>
+      </div>
+      <div className={common.text_container}>
+        <p>
+          Αξίζει να διαβάσετε και{" "}
+          <a
+            href="https://www.gastronomos.gr/exodos/syros-o-apolytos-odigos-me-ta-kalytera-estiatoria-mpar-zacharoplasteia/141524/?fbclid=IwAR0LcL8L1O4Qz3ItcVsbjDsE2qDmtE3IUExX4ThDz_VwTvyUQPFepgHnZfQ"
+            target="_blank"
+          >
+            αυτό το άρθρο
+          </a>{" "}
+          από τον Γαστρονόμο.
+        </p>
       </div>
     </>
   );
