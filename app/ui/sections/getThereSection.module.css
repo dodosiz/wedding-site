@@ -1,0 +1,10 @@
+.grid_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px 10%;
+}
+
+.text_center {
+    text-align: center;
+}

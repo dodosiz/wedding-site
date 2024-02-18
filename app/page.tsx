@@ -1,11 +1,13 @@
 "use client";
 import { useState } from "react";
 import { NavigationBar } from "./ui/navigationBar";
-import { Section, SectionProps } from "./ui/section";
+import { Section } from "./ui/section";
 import { HomeSection } from "./ui/sections/homeSection";
 import { LocationSection } from "./ui/sections/locationSection";
 import { FoodSection } from "./ui/sections/foodSection";
 import { AccomondationSection } from "./ui/sections/accomondationSection";
+import { GetThereSection } from "./ui/sections/getThereSection";
+import { AttractionsSection } from "./ui/sections/attractionsSection";
 
 export default function Home() {
   const [active, setActive] = useState("home");
@@ -36,19 +38,11 @@ export default function Home() {
         <Section id="food" setActiveNav={setActive}>
           <FoodSection />
         </Section>
-        <Section id="attractions" setActiveNav={setActive} fixedHeight>
-          <div
-            style={{
-              backgroundColor: "royalblue",
-              width: "100%",
-              height: "100%",
-            }}
-          ></div>
+        <Section id="attractions" setActiveNav={setActive}>
+          <AttractionsSection />
         </Section>
-        <Section id="getThere" setActiveNav={setActive} fixedHeight>
-          <div
-            style={{ backgroundColor: "beige", width: "100%", height: "100%" }}
-          ></div>
+        <Section id="getThere" setActiveNav={setActive}>
+          <GetThereSection />
         </Section>
       </main>
     </>
