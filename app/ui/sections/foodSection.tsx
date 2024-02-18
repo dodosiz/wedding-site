@@ -13,7 +13,7 @@ export function FoodSection() {
             width={380}
             height={600}
             alt="eating outside"
-            src="/food4.jpg"
+            src="/food4.JPG"
           />
         </div>
         <div className={styles.flex_container_right}>
