@@ -1,11 +1,11 @@
 import { Noto_Serif } from "next/font/google";
 
-const serif = Noto_Serif({subsets: ["latin", "greek"]})
+const serif = Noto_Serif({ subsets: ["latin", "greek"] });
 
 interface HeaderProps {
-    children?: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 export function Header(props: HeaderProps) {
-    return <h1 className={serif.className}>{props.children}</h1>
+  return <h1 className={serif.className}>{props.children}</h1>;
 }

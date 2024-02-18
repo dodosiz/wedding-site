@@ -2,8 +2,6 @@
 import { useState } from "react";
 import { NavigationBar } from "./ui/navigationBar";
 import { Section, SectionProps } from "./ui/section";
-import styles from "./page.module.css";
-import Image from "next/image";
 import { HomeSection } from "./ui/sections/homeSection";
 import { LocationSection } from "./ui/sections/locationSection";
 import { FoodSection } from "./ui/sections/foodSection";
