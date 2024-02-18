@@ -1,35 +1,61 @@
+import { Header } from "../header";
 import styles from "./homeSection.module.css";
 import { useEffect, useState } from "react";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 
 export function HomeSection() {
   const [counter, setCounter] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCounter(counter + 1)
-      if (counter > 6) {
-        setCounter(0)
+      if (counter > 2) {
+        setCounter(0);
+      } else {
+        setCounter(counter + 1);
       }
-    }, 3000)
-    return () => clearInterval(interval)
-  })
+    }, 5000);
+    return () => clearInterval(interval);
+  });
+
+  const next = () => {
+    if (counter > 2) {
+      setCounter(0);
+    } else {
+      setCounter(counter + 1);
+    }
+  };
+
+  const previous = () => {
+    if (counter > 0) {
+      setCounter(counter - 1);
+    } else {
+      setCounter(3);
+    }
+  };
   return (
     <>
-    <div className={styles.home_background_container}>
-      <div className={getBackgroundClass(counter)}></div>
-    </div>
-    <div className={styles.home_text_container}>
-      <div className={styles.save_the_date}>Save the Date</div>
-      <div className={styles.date_heading}>Κυριακή</div>
-      <div className={styles.date_heading}>28 Ιουλίου 2024</div>
-      <div className={styles.location_heading} style={{marginTop: "50px"}}>Ερμούπολη, Σύρος</div>
-    </div>
+      <div className={styles.home_background_container}>
+        <div className={getBackgroundClass(counter)}>
+          <div className={styles.arrow} onClick={previous}>
+            <ChevronLeftIcon />
+          </div>
+          <div className={`${styles.arrow} ${styles.right}`} onClick={next}>
+            <ChevronRightIcon />
+          </div>
+        </div>
+      </div>
+      <div className={styles.home_text_container}>
+        <Header>Save the Date</Header>
+        <h2 style={{ margin: 0 }}>Κυριακή</h2>
+        <h2 style={{ margin: 0 }}>28 Ιουλίου 2024</h2>
+        <p style={{ margin: 0 }}>Ερμούπολη, Σύρος</p>
+      </div>
     </>
   );
 }
 
 function getBackgroundClass(index: number) {
-  switch(index) {
+  switch (index) {
     case 0:
       return styles.home_background0;
     case 1:
@@ -38,14 +64,6 @@ function getBackgroundClass(index: number) {
       return styles.home_background2;
     case 3:
       return styles.home_background3;
-    case 4:
-      return styles.home_background4;
-    case 5:
-      return styles.home_background5;
-    case 6:
-      return styles.home_background6;
-    case 7:
-      return styles.home_background7;
     default:
       return styles.home_background0;
   }
