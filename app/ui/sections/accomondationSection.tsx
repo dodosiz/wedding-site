@@ -18,10 +18,10 @@ export function AccomondationSection() {
         <div className={styles.image_container}>
           <Image
             className={styles.accomondation_image}
-            width={285}
-            height={428}
+            width={515}
+            height={447}
             alt="where to stay"
-            src="/hotel2.JPG"
+            src="/houses.png"
           />
         </div>
         <div>

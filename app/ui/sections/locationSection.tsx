@@ -27,9 +27,12 @@ export function LocationSection() {
             "Στη συνέχεια θα κατευθυνθούμε λίγο πιο κάτω στο secret location. Εκεί θα απολαύσουμε το μενού που μας ετοίμασε το Catering Ζοζεφίνος, πάντα με συνοδεία δροσιστικά Coctail."
           }
         </p>
-        <a href="https://maps.app.goo.gl/GKHcszwbC9EM9fHp9" target="_blank">
-          <Image src="/pin.gif" width={100} height={100} alt="pin" />
-        </a>
+        <div className={styles.location_pin_container}>
+          <Image src="/church.png" width={640} height={360} alt="church" />
+          <a href="https://maps.app.goo.gl/GKHcszwbC9EM9fHp9" target="_blank" className={styles.pin_link}>
+            <Image src="/pin.gif" width={100} height={100} alt="pin" />
+          </a>
+        </div>
       </div>
     </>
   );
