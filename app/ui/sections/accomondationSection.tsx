@@ -7,7 +7,7 @@ export function AccomondationSection() {
   return (
     <div className={styles.location_section}>
       <div className={common.text_container}>
-        <Header>Που να μείνετε</Header>
+        <Header>Διαμονή</Header>
         <p>
           Παρακάτω παρουσιάζονται μερικά από τα δημοφιλή ξενοδοχεία στην Σύρο,
           καθώς και μερικά καταλύματα στην περιοχή της Ερμούπολης, προσφέροντας
@@ -15,13 +15,13 @@ export function AccomondationSection() {
         </p>
       </div>
       <div className={styles.hotels_grid_container}>
-        <div>
+        <div className={styles.image_container}>
           <Image
             className={styles.accomondation_image}
             width={285}
             height={428}
             alt="where to stay"
-            src="/hotel.JPG"
+            src="/hotel2.JPG"
           />
         </div>
         <div>

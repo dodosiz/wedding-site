@@ -1,8 +1,9 @@
 import { Header } from "../header";
 import common from "./common.module.css";
+import styles from "./attractionsSection.module.css";
 
 export function AttractionsSection() {
-    return <div className={common.text_container}>
+    return <div className={`${styles.attractions_section} ${common.text_container}`}>
         <Header>Αξιοθέατα</Header>
         <ul>
             <li>Σύρος - Αξιοθέατα Πολιτισμού</li>

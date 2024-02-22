@@ -1,6 +1,6 @@
 .grid_container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 3fr;
   gap: 20px;
   padding: 20px 10%;
 }
@@ -13,6 +13,8 @@
 
 .flex_container_left {
   padding-top: 100px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .flex_container_right {

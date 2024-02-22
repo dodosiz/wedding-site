@@ -4,10 +4,16 @@
 
 .hotels_grid_container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 5% 10%;
+  grid-template-columns: 2fr 3fr;
+  gap: 40px;
+  padding: 20px 10%;
 }
 
 .accomondation_image {
   border-radius: 10px;
+}
+
+.image_container {
+  display: flex;
+  justify-content: end;
 }
