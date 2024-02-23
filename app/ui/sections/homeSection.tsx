@@ -61,7 +61,7 @@ export function HomeSection() {
           </div>
           <div className={styles.suspects_grid_item}>
             <Header textAlign="center" level={3}>Η νύφη<br />αρχιτέκτονας</Header>
-            <div className={styles.suspects_grid_box}></div>
+            <Image className={styles.suspect_img} width={250} height={500} alt="natalia" src="/usual_suspects/natalia.jpg" />
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
           </div>
           <div className={styles.suspects_grid_item}>
