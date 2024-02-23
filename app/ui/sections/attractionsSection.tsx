@@ -17,56 +17,11 @@ export function AttractionsSection() {
     return <div className={`${styles.attractions_section} ${common.text_container}`}>
         <Header textAlign="center">Αξιοθέατα</Header>
         <div className={styles.attractions_grid}>
-            <div className={styles.attractions_grid_item}>
-                <div
-                    className={getStyle(styles.img_placeholder, 0)}
-                    onMouseOver={() => {setHovered(0)}}
-                    onMouseLeave={() => {setHovered(undefined)}}
-                ></div>
-            </div>
-            <div className={styles.attractions_grid_item2}>
-                <div
-                    className={getStyle(styles.img_placeholder, 1)}
-                    onMouseOver={() => {setHovered(1)}}
-                    onMouseLeave={() => {setHovered(undefined)}}
-                ></div>
-                <div
-                    className={getStyle(styles.img_placeholder, 2)}
-                    onMouseOver={() => {setHovered(2)}}
-                    onMouseLeave={() => {setHovered(undefined)}}
-                ></div>
-            </div>
-            <div className={styles.attractions_grid_item3}>
-                <div
-                    className={getStyle(styles.img_placeholder, 3)}
-                    onMouseOver={() => {setHovered(3)}}
-                    onMouseLeave={() => {setHovered(undefined)}}
-                ></div>
-                <div
-                    className={getStyle(styles.img_placeholder, 4)}
-                    onMouseOver={() => {setHovered(4)}}
-                    onMouseLeave={() => {setHovered(undefined)}}
-                ></div>
-            </div>
-            <div className={styles.attractions_grid_item2}>
-                <div
-                    className={getStyle(styles.img_placeholder, 5)}
-                    onMouseOver={() => {setHovered(5)}}
-                    onMouseLeave={() => {setHovered(undefined)}}
-                ></div>
-                <div
-                    className={getStyle(styles.img_placeholder, 6)}
-                    onMouseOver={() => {setHovered(6)}}
-                    onMouseLeave={() => {setHovered(undefined)}}
-                ></div>
-            </div>
-            <div className={styles.attractions_grid_item}>
-                <div
-                    className={getStyle(styles.img_placeholder, 7)}
-                    onMouseOver={() => {setHovered(7)}}
-                    onMouseLeave={() => {setHovered(undefined)}}
-                ></div>
-            </div>
+            <AttractionGridColumn getStyle={getStyle} setHovered={setHovered} indexes={[0]} />
+            <AttractionGridColumn getStyle={getStyle} setHovered={setHovered} indexes={[1, 2]} />
+            <AttractionGridColumn getStyle={getStyle} setHovered={setHovered} indexes={[3, 4]} withGap />
+            <AttractionGridColumn getStyle={getStyle} setHovered={setHovered} indexes={[5, 6]} />
+            <AttractionGridColumn getStyle={getStyle} setHovered={setHovered} indexes={[7]} />
         </div>
         <ul>
             <li>Σύρος - Αξιοθέατα Πολιτισμού</li>
@@ -79,5 +34,26 @@ export function AttractionsSection() {
             <li>Αγία Πακού</li>
             <li>Πινακοθήκη Κυκλάδων</li>
         </ul>
+    </div>
+}
+
+interface AttractionGridColumnProps {
+    indexes: number[];
+    withGap?: boolean;
+    setHovered(n: number | undefined): void;
+    getStyle(s: string, i: number): string;
+}
+
+function AttractionGridColumn(props: AttractionGridColumnProps) {
+    return <div className={
+        props.withGap ? styles.attractions_grid_item_with_gap : styles.attractions_grid_item}>
+        {props.indexes.map(index => {
+            return <div
+                key={`img-item-${index}`}
+                className={props.getStyle(styles.img_placeholder, index)}
+                onMouseOver={() => {props.setHovered(index)}}
+                onMouseLeave={() => {props.setHovered(undefined)}}
+            ></div>
+        })}
     </div>
 }

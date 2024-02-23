@@ -11,17 +11,11 @@
 .attractions_grid_item {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-}
-
-.attractions_grid_item2 {
-    display: flex;
-    flex-direction: column;
     gap: 20px;
     justify-content: center;
 }
 
-.attractions_grid_item3 {
+.attractions_grid_item_with_gap {
     display: flex;
     flex-direction: column;
     gap: 100px;
