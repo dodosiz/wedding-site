@@ -7,7 +7,7 @@ export function AccomondationSection() {
   return (
     <div className={styles.location_section}>
       <div className={common.text_container}>
-        <Header>Διαμονή</Header>
+        <Header textAlign="center">Διαμονή</Header>
         <p>
           Παρακάτω παρουσιάζονται μερικά από τα δημοφιλή ξενοδοχεία στην Σύρο,
           καθώς και μερικά καταλύματα στην περιοχή της Ερμούπολης, προσφέροντας

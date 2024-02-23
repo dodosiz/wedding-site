@@ -4,7 +4,7 @@ import styles from "./attractionsSection.module.css";
 
 export function AttractionsSection() {
     return <div className={`${styles.attractions_section} ${common.text_container}`}>
-        <Header>Αξιοθέατα</Header>
+        <Header textAlign="center">Αξιοθέατα</Header>
         <ul>
             <li>Σύρος - Αξιοθέατα Πολιτισμού</li>
             <li>Η Πλατεία Μιαούλη</li>

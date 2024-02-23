@@ -10,7 +10,7 @@ export function LocationSection() {
         <div className={styles.ermoupolis_background}></div>
       </div>
       <div className={common.text_container}>
-        <Header>{"Η Τοποθεσία"}</Header>
+        <Header textAlign="center">{"Η Τοποθεσία"}</Header>
         <p>
           {
             "Το μυστήριο θα τελεστεί στην εκκλησία του αγίου Νικολάου στην Ερμούπολη Σύρου. Η ώρα "

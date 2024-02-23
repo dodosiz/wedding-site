@@ -34,7 +34,7 @@ export function FoodSection() {
         </div>
       </div>
       <div className={common.text_container}>
-        <Header>Γευστικές περιηγήσεις</Header>
+        <Header textAlign="center">Γευστικές περιηγήσεις</Header>
         <p>
           Το πιο φημισμένο προϊόν του νησιού είναι το συριανό λουκούμι. Η τέχνη
           της παρασκευής του έφτασε στη Σύρο με τους πρώτους πρόσφυγες από Χίο,

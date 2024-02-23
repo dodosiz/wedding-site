@@ -5,7 +5,7 @@ import { Header } from "../header";
 export function GetThereSection() {
     return <>
         <div className={common.text_container}>
-            <Header>Μετάβαση</Header>
+            <Header textAlign="center">Μετάβαση</Header>
             <p>
                 Η πλεονεκτική θέση της Σύρου στην καρδιά των Κυκλάδων και η κοντινή της απόσταση
                 από την Αθήνα δίνει τη δυνατότητα σε όλους τους ταξιδιώτες να μεταβούν στο νησί με

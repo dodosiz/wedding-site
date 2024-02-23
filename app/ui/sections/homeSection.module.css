@@ -12,6 +12,41 @@
   justify-content: center;
 }
 
+.home_suspects_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.suspects_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  padding: 20px 10%;
+  gap: 10px;
+}
+
+.suspects_grid_item {
+  text-align: center;
+}
+
+.suspects_grid_box {
+  width: 250px;
+  height: 500px;
+  border: 1px solid black;
+  background-color: gray;
+}
+
+.suspects_logo {
+  width: 300px;
+  padding: 20px 0;
+}
+
+.suspects_logo > p {
+  text-align: center;
+}
+
 .arrow {
   width: 50px;
   height: 100%;
