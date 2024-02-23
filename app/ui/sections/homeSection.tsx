@@ -56,7 +56,7 @@ export function HomeSection() {
         <div className={styles.suspects_grid}>
           <div className={styles.suspects_grid_item}>
             <Header textAlign="center" level={3}>Ο γαμπρός<br />προγραμματιστής</Header>
-            <Image width={250} height={500} alt="theo" src="/usual_suspects/theo.jpg" />
+            <Image className={styles.suspect_img} width={250} height={500} alt="theo" src="/usual_suspects/theo.jpg" />
             <p>Αυτός που πληρώνει την νύφη.</p>
           </div>
           <div className={styles.suspects_grid_item}>
@@ -65,7 +65,7 @@ export function HomeSection() {
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
           </div>
           <div className={styles.suspects_grid_item}>
-            <Header textAlign="center" level={3}>Το βαπτιστήρι<br />CEO</Header>
+            <Header textAlign="center" level={3}>Το βαπτιστήρι<br/>τσουρεκάκι</Header>
             <div className={styles.suspects_grid_box}></div>
             <p>Η μικρή ταραξίας</p>
           </div>
@@ -76,7 +76,7 @@ export function HomeSection() {
           </div>
           <div className={styles.suspects_grid_item}>
             <Header textAlign="center" level={3}>Ο νονός<br />ψυχολόγος</Header>
-            <Image width={250} height={500} alt="noulis" src="/usual_suspects/noulis.jpg" />
+            <Image className={styles.suspect_img} width={250} height={500} alt="noulis" src="/usual_suspects/noulis.jpg" />
             <p>Αξιολόγηση και διάγνωση καταλληλότητας προσαρμογής σε πάρτυ.</p>
           </div>
         </div>

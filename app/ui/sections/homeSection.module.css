@@ -41,6 +41,14 @@
   background-color: gray;
 }
 
+.suspect_img {
+  transition: transform .5s ease;
+}
+
+.suspect_img:hover {
+  transform: scale(1.05, 1.05);
+}
+
 .suspects_logo {
   width: 300px;
   padding: 20px 0;
