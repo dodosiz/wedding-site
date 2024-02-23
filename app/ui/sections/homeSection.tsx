@@ -56,7 +56,7 @@ export function HomeSection() {
         <div className={styles.suspects_grid}>
           <div className={styles.suspects_grid_item}>
             <Header textAlign="center" level={3}>Ο γαμπρός<br />προγραμματιστής</Header>
-            <div className={styles.suspects_grid_box}></div>
+            <Image width={250} height={500} alt="theo" src="/usual_suspects/theo.jpg" />
             <p>Αυτός που πληρώνει την νύφη.</p>
           </div>
           <div className={styles.suspects_grid_item}>
@@ -76,7 +76,7 @@ export function HomeSection() {
           </div>
           <div className={styles.suspects_grid_item}>
             <Header textAlign="center" level={3}>Ο νονός<br />ψυχολόγος</Header>
-            <div className={styles.suspects_grid_box}></div>
+            <Image width={250} height={500} alt="noulis" src="/usual_suspects/noulis.jpg" />
             <p>Αξιολόγηση και διάγνωση καταλληλότητας προσαρμογής σε πάρτυ.</p>
           </div>
         </div>
