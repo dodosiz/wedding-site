@@ -2,6 +2,7 @@ import { Header } from "../header";
 import common from "./common.module.css";
 import styles from "./attractionsSection.module.css";
 import { useState } from "react";
+import Image from "next/image";
 
 export function AttractionsSection() {
     const [hovered, setHovered] = useState<number | undefined>(undefined);
@@ -17,11 +18,45 @@ export function AttractionsSection() {
     return <div className={`${styles.attractions_section} ${common.text_container}`}>
         <Header textAlign="center">Αξιοθέατα</Header>
         <div className={styles.attractions_grid}>
-            <AttractionGridColumn getStyle={getStyle} setHovered={setHovered} indexes={[0]} />
-            <AttractionGridColumn getStyle={getStyle} setHovered={setHovered} indexes={[1, 2]} />
-            <AttractionGridColumn getStyle={getStyle} setHovered={setHovered} indexes={[3, 4]} withGap />
-            <AttractionGridColumn getStyle={getStyle} setHovered={setHovered} indexes={[5, 6]} />
-            <AttractionGridColumn getStyle={getStyle} setHovered={setHovered} indexes={[7]} />
+            <AttractionGridColumn
+                getStyle={getStyle}
+                setHovered={setHovered}
+                images={[
+                    {index: 0, path: "/attractions/dhmarxeio.jpg"}
+                ]}
+            />
+            <AttractionGridColumn
+                getStyle={getStyle}
+                setHovered={setHovered}
+                images={[
+                    {index: 1, path: "/attractions/agios_stefanos.jpg"},
+                    {index: 2, path: "/attractions/agiou_pakou.jpg"}
+                ]}
+            />
+            <AttractionGridColumn
+                getStyle={getStyle}
+                setHovered={setHovered}
+                images={[
+                    {index: 3, path: "/attractions/kukladikhs.jpg"},
+                    {index: 4, path: "/attractions/grammata.jpg"}
+                ]}
+                withGap
+            />
+            <AttractionGridColumn
+                getStyle={getStyle}
+                setHovered={setHovered}
+                images={[
+                    {index: 5, path: "/attractions/theatro.jpg"},
+                    {index: 6, path: "/attractions/vaporia.jpg"}
+                ]}
+            />
+            <AttractionGridColumn
+                getStyle={getStyle}
+                setHovered={setHovered}
+                images={[
+                    {index: 7, path: "/attractions/dhmarxeio2.jpg"}
+                ]}
+            />
         </div>
         <ul>
             <li>Σύρος - Αξιοθέατα Πολιτισμού</li>
@@ -37,8 +72,13 @@ export function AttractionsSection() {
     </div>
 }
 
+interface Image {
+    index: number;
+    path: string;
+}
+
 interface AttractionGridColumnProps {
-    indexes: number[];
+    images: Image[];
     withGap?: boolean;
     setHovered(n: number | undefined): void;
     getStyle(s: string, i: number): string;
@@ -47,13 +87,17 @@ interface AttractionGridColumnProps {
 function AttractionGridColumn(props: AttractionGridColumnProps) {
     return <div className={
         props.withGap ? styles.attractions_grid_item_with_gap : styles.attractions_grid_item}>
-        {props.indexes.map(index => {
-            return <div
-                key={`img-item-${index}`}
-                className={props.getStyle(styles.img_placeholder, index)}
-                onMouseOver={() => {props.setHovered(index)}}
+        {props.images.map(image => {
+            return <Image
+                width={150}
+                height={280}
+                key={`img-item-${image.index}`}
+                className={props.getStyle(styles.img_placeholder, image.index)}
+                onMouseOver={() => {props.setHovered(image.index)}}
                 onMouseLeave={() => {props.setHovered(undefined)}}
-            ></div>
+                alt={`attraction image ${image.index}`}
+                src={image.path}
+            />
         })}
     </div>
 }
