@@ -25,8 +25,11 @@
 .img_placeholder {
     width: 150px;
     height: 280px;
-    border-radius: 10px;
     transition: transform .5s ease;
+}
+
+.attraction_img {
+    border-radius: 10px;
 }
 
 .img_placeholder.img_placeholder_grow {
@@ -35,4 +38,22 @@
 
 .img_placeholder.img_placeholder_shrink {
     transform: scale(0.8, 0.8);
+}
+  
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: none;
+    font-weight: 400;
+}
+
+.img_placeholder:hover > .text {
+    display: block;
+}
+
+.img_placeholder:hover > .attraction_img {
+    opacity: 0.5;
 }

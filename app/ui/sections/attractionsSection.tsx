@@ -22,23 +22,23 @@ export function AttractionsSection() {
                 getStyle={getStyle}
                 setHovered={setHovered}
                 images={[
-                    {index: 0, path: "/attractions/dhmarxeio.jpg"}
+                    {index: 0, path: "/attractions/dhmarxeio.jpg", text: "Δημαρχείο της Σύρου"}
                 ]}
             />
             <AttractionGridColumn
                 getStyle={getStyle}
                 setHovered={setHovered}
                 images={[
-                    {index: 1, path: "/attractions/agios_stefanos.jpg"},
-                    {index: 2, path: "/attractions/agiou_pakou.jpg"}
+                    {index: 1, path: "/attractions/agios_stefanos.jpg", text: "Ναός Άγιος Στέφανος"},
+                    {index: 2, path: "/attractions/agiou_pakou.jpg", text: "Αγία Πακού"}
                 ]}
             />
             <AttractionGridColumn
                 getStyle={getStyle}
                 setHovered={setHovered}
                 images={[
-                    {index: 3, path: "/attractions/kukladikhs.jpg"},
-                    {index: 4, path: "/attractions/grammata.jpg"}
+                    {index: 3, path: "/attractions/kukladikhs.jpg", text: "Πινακοθήκη Κυκλάδων"},
+                    {index: 4, path: "/attractions/grammata.jpg", text: "Τα Γράμματα"}
                 ]}
                 withGap
             />
@@ -46,35 +46,25 @@ export function AttractionsSection() {
                 getStyle={getStyle}
                 setHovered={setHovered}
                 images={[
-                    {index: 5, path: "/attractions/theatro.jpg"},
-                    {index: 6, path: "/attractions/vaporia.jpg"}
+                    {index: 5, path: "/attractions/theatro.jpg", text: "Δημοτικό Θέατρο Απόλλων"},
+                    {index: 6, path: "/attractions/vaporia.jpg", text: "Συνοικία Βαπόρια"}
                 ]}
             />
             <AttractionGridColumn
                 getStyle={getStyle}
                 setHovered={setHovered}
                 images={[
-                    {index: 7, path: "/attractions/dhmarxeio2.jpg"}
+                    {index: 7, path: "/attractions/dhmarxeio2.jpg", text: "Η Πλατεία Μιαούλη"}
                 ]}
             />
         </div>
-        <ul>
-            <li>Σύρος - Αξιοθέατα Πολιτισμού</li>
-            <li>Η Πλατεία Μιαούλη</li>
-            <li>Δημαρχείο της Σύρου</li>
-            <li>συνοικία Βαπόρια</li>
-            <li>Βιομηχανικό Μουσείο της Ερμούπολης</li>
-            <li>Δημοτικό Θέατρο Απόλλων</li>
-            <li>Ναός Άγιος Στέφανος</li>
-            <li>Αγία Πακού</li>
-            <li>Πινακοθήκη Κυκλάδων</li>
-        </ul>
     </div>
 }
 
 interface Image {
     index: number;
     path: string;
+    text: string;
 }
 
 interface AttractionGridColumnProps {
@@ -88,16 +78,21 @@ function AttractionGridColumn(props: AttractionGridColumnProps) {
     return <div className={
         props.withGap ? styles.attractions_grid_item_with_gap : styles.attractions_grid_item}>
         {props.images.map(image => {
-            return <Image
-                width={150}
-                height={280}
+            return <div
                 key={`img-item-${image.index}`}
                 className={props.getStyle(styles.img_placeholder, image.index)}
                 onMouseOver={() => {props.setHovered(image.index)}}
                 onMouseLeave={() => {props.setHovered(undefined)}}
-                alt={`attraction image ${image.index}`}
-                src={image.path}
-            />
+            >
+                <Image
+                    width={150}
+                    height={280}
+                    className={styles.attraction_img}
+                    alt={`attraction image ${image.index}`}
+                    src={image.path}
+                />
+                <p className={styles.text}>{image.text}</p>
+            </div>
         })}
     </div>
 }
