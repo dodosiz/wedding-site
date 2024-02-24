@@ -22,23 +22,48 @@ export function AttractionsSection() {
                 getStyle={getStyle}
                 setHovered={setHovered}
                 images={[
-                    {index: 0, path: "/attractions/dhmarxeio.jpg", text: "Δημαρχείο της Σύρου"}
+                    {
+                        index: 0,
+                        path: "/attractions/dhmarxeio.jpg",
+                        text: "Δημαρχείο της Σύρου",
+                        link: "https://maps.app.goo.gl/odZ57ujvQKHnhPe37"
+                    }
                 ]}
             />
             <AttractionGridColumn
                 getStyle={getStyle}
                 setHovered={setHovered}
                 images={[
-                    {index: 1, path: "/attractions/agios_stefanos.jpg", text: "Ναός Άγιος Στέφανος"},
-                    {index: 2, path: "/attractions/agiou_pakou.jpg", text: "Αγία Πακού"}
+                    {
+                        index: 1,
+                        path: "/attractions/agios_stefanos.jpg",
+                        text: "Άγιος Στέφανος",
+                        link: "https://maps.app.goo.gl/B3rxnywN9LBbeHHVA"
+                    },
+                    {
+                        index: 2,
+                        path: "/attractions/agiou_pakou.jpg",
+                        text: "Αγία Πακού",
+                        link: "https://maps.app.goo.gl/hHNbRicqTJpuVhBV7"
+                    }
                 ]}
             />
             <AttractionGridColumn
                 getStyle={getStyle}
                 setHovered={setHovered}
                 images={[
-                    {index: 3, path: "/attractions/kukladikhs.jpg", text: "Πινακοθήκη Κυκλάδων"},
-                    {index: 4, path: "/attractions/grammata.jpg", text: "Τα Γράμματα"}
+                    {
+                        index: 3,
+                        path: "/attractions/kukladikhs.jpg",
+                        text: "Πινακοθήκη Κυκλάδων",
+                        link: "https://maps.app.goo.gl/UU9d2QfbrbEGyT6r6"
+                    },
+                    {
+                        index: 4,
+                        path: "/attractions/grammata.jpg",
+                        text: "Τα Γράμματα",
+                        link: "https://maps.app.goo.gl/HU83NG95wF2UxenS8"
+                    }
                 ]}
                 withGap
             />
@@ -46,15 +71,30 @@ export function AttractionsSection() {
                 getStyle={getStyle}
                 setHovered={setHovered}
                 images={[
-                    {index: 5, path: "/attractions/theatro.jpg", text: "Δημοτικό Θέατρο Απόλλων"},
-                    {index: 6, path: "/attractions/vaporia.jpg", text: "Συνοικία Βαπόρια"}
+                    {
+                        index: 5,
+                        path: "/attractions/theatro.jpg",
+                        text: "Δημοτικό Θέατρο Απόλλων",
+                        link: "https://maps.app.goo.gl/q2srCfX3PMZ4K7AS8"
+                    },
+                    {
+                        index: 6,
+                        path: "/attractions/vaporia.jpg",
+                        text: "Συνοικία Βαπόρια",
+                        link: "https://maps.app.goo.gl/GqRF7GtkafciSt7F7"
+                    }
                 ]}
             />
             <AttractionGridColumn
                 getStyle={getStyle}
                 setHovered={setHovered}
                 images={[
-                    {index: 7, path: "/attractions/dhmarxeio2.jpg", text: "Η Πλατεία Μιαούλη"}
+                    {
+                        index: 7,
+                        path: "/attractions/dhmarxeio2.jpg",
+                        text: "Η Πλατεία Μιαούλη",
+                        link: "https://maps.app.goo.gl/315s56Zdfz2zayEn8"
+                    }
                 ]}
             />
         </div>
@@ -65,6 +105,7 @@ interface Image {
     index: number;
     path: string;
     text: string;
+    link: string;
 }
 
 interface AttractionGridColumnProps {
@@ -78,11 +119,13 @@ function AttractionGridColumn(props: AttractionGridColumnProps) {
     return <div className={
         props.withGap ? styles.attractions_grid_item_with_gap : styles.attractions_grid_item}>
         {props.images.map(image => {
-            return <div
+            return <a
                 key={`img-item-${image.index}`}
                 className={props.getStyle(styles.img_placeholder, image.index)}
                 onMouseOver={() => {props.setHovered(image.index)}}
                 onMouseLeave={() => {props.setHovered(undefined)}}
+                href={image.link}
+                target="_blank"
             >
                 <Image
                     width={150}
@@ -92,7 +135,7 @@ function AttractionGridColumn(props: AttractionGridColumnProps) {
                     src={image.path}
                 />
                 <p className={styles.text}>{image.text}</p>
-            </div>
+            </a>
         })}
     </div>
 }
