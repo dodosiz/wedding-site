@@ -152,4 +152,10 @@
   .suspects_grid {
     grid-template-columns: 1fr;
   }
+  .suspects_logo {
+    width: 180px;
+  }
+  .home_suspects_container {
+    padding-top: 20px;
+  }
 }

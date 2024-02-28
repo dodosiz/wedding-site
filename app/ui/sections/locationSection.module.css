@@ -22,6 +22,14 @@
   top: -80px;
 }
 
+.church_mobile {
+  display: none;
+}
+
+.church_desktop {
+  display: block;
+}
+
 @media only screen and (max-width: 400px) {
   .pin_link {
     top: 0;
@@ -31,5 +39,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+  }
+  .church_mobile {
+    display: block;
+  }
+  .church_desktop {
+    display: none;
   }
 }

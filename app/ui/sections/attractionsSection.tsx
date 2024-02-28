@@ -128,7 +128,7 @@ function AttractionGridColumn(props: AttractionGridColumnProps) {
     >
       {props.images.map((image) => {
         return (
-          <a
+          <div
             key={`img-item-${image.index}`}
             className={props.getStyle(styles.img_placeholder, image.index)}
             onMouseOver={() => {
@@ -137,8 +137,6 @@ function AttractionGridColumn(props: AttractionGridColumnProps) {
             onMouseLeave={() => {
               props.setHovered(undefined);
             }}
-            href={image.link}
-            target="_blank"
           >
             <Image
               width={150}
@@ -148,8 +146,10 @@ function AttractionGridColumn(props: AttractionGridColumnProps) {
               src={image.path}
               layout="responsive"
             />
-            <p className={styles.text}>{image.text}</p>
-          </a>
+            <a href={image.link} target="_blank" className={styles.text}>
+              {image.text}
+            </a>
+          </div>
         );
       })}
     </div>

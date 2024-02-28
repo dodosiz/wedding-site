@@ -103,7 +103,13 @@ export function HomeSection() {
               <br />
               σομελιέ
             </Header>
-            <div className={styles.suspects_grid_box}></div>
+            <Image
+              className={styles.suspect_img}
+              width={250}
+              height={500}
+              alt="alex"
+              src="/usual_suspects/alex.jpg"
+            />
             <p>Προμήθεια και διακίνηση αλκοόλ.</p>
           </div>
           <div className={styles.suspects_grid_item}>
@@ -126,6 +132,7 @@ export function HomeSection() {
           <Image
             width={275}
             height={208}
+            layout="responsive"
             alt="the usual suspects"
             src="/usual_suspects.png"
           />

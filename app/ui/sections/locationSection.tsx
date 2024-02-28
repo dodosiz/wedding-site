@@ -30,7 +30,16 @@ export function LocationSection() {
         <div className={styles.location_pin_container}>
           <Image
             layout="responsive"
+            src="/church_mobile.png"
+            className={styles.church_mobile}
+            width={336}
+            height={270}
+            alt="church mobile"
+          />
+          <Image
+            layout="responsive"
             src="/church.png"
+            className={styles.church_desktop}
             width={640}
             height={360}
             alt="church"

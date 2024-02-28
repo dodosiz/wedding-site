@@ -59,7 +59,24 @@
 }
 
 @media only screen and (max-width: 400px) {
+  .img_placeholder {
+    width: 60px;
+    height: 125px;
+  }
+
   .attractions_grid {
-    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+  
+  .attractions_grid_item {
+    gap: 5px;
+  }
+
+  .attraction_img {
+    border-radius: 5px;
+  }
+
+  .text {
+    font-size: 0.8em;
   }
 }
