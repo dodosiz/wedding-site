@@ -9,6 +9,7 @@ export function FoodSection() {
       <div className={styles.grid_container}>
         <div className={styles.flex_container_left}>
           <Image
+            layout="responsive"
             className={styles.food_image}
             width={380}
             height={600}
@@ -18,6 +19,7 @@ export function FoodSection() {
         </div>
         <div className={styles.flex_container_right}>
           <Image
+            layout="responsive"
             className={styles.food_image}
             width={600}
             height={390}
@@ -25,6 +27,7 @@ export function FoodSection() {
             src="/food1.JPG"
           />
           <Image
+            layout="responsive"
             className={styles.food_image}
             width={420}
             height={220}
@@ -287,6 +290,7 @@ export function FoodSection() {
             width={350}
             height={350}
             alt="Drink"
+            layout="responsive"
             src="/drink.gif"
           />
         </div>

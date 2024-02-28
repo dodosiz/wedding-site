@@ -52,37 +52,87 @@ export function HomeSection() {
         <p style={{ margin: 0 }}>Ερμούπολη, Σύρος</p>
       </div>
       <div className={styles.home_suspects_container}>
-        <Header textAlign="center">The Usual<br/>Suspects</Header>
+        <Header textAlign="center">
+          The Usual
+          <br />
+          Suspects
+        </Header>
         <div className={styles.suspects_grid}>
           <div className={styles.suspects_grid_item}>
-            <Header textAlign="center" level={3}>Ο γαμπρός<br />προγραμματιστής</Header>
-            <Image className={styles.suspect_img} width={250} height={500} alt="theo" src="/usual_suspects/theo.jpg" />
+            <Header textAlign="center" level={3}>
+              Ο γαμπρός
+              <br />
+              προγραμματιστής
+            </Header>
+            <Image
+              className={styles.suspect_img}
+              width={250}
+              height={500}
+              alt="theo"
+              src="/usual_suspects/theo.jpg"
+            />
             <p>Αυτός που πληρώνει την νύφη.</p>
           </div>
           <div className={styles.suspects_grid_item}>
-            <Header textAlign="center" level={3}>Η νύφη<br />αρχιτέκτονας</Header>
-            <Image className={styles.suspect_img} width={250} height={500} alt="natalia" src="/usual_suspects/natalia.jpg" />
+            <Header textAlign="center" level={3}>
+              Η νύφη
+              <br />
+              αρχιτέκτονας
+            </Header>
+            <Image
+              className={styles.suspect_img}
+              width={250}
+              height={500}
+              alt="natalia"
+              src="/usual_suspects/natalia.jpg"
+            />
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
           </div>
           <div className={styles.suspects_grid_item}>
-            <Header textAlign="center" level={3}>Το βαπτιστήρι<br/>τσουρεκάκι</Header>
+            <Header textAlign="center" level={3}>
+              Το βαπτιστήρι
+              <br />
+              τσουρεκάκι
+            </Header>
             <div className={styles.suspects_grid_box}></div>
             <p>Η μικρή ταραξίας</p>
           </div>
           <div className={styles.suspects_grid_item}>
-            <Header textAlign="center" level={3}>Η κουμπάρα<br />σομελιέ</Header>
+            <Header textAlign="center" level={3}>
+              Η κουμπάρα
+              <br />
+              σομελιέ
+            </Header>
             <div className={styles.suspects_grid_box}></div>
             <p>Προμήθεια και διακίνηση αλκοόλ.</p>
           </div>
           <div className={styles.suspects_grid_item}>
-            <Header textAlign="center" level={3}>Ο νονός<br />ψυχολόγος</Header>
-            <Image className={styles.suspect_img} width={250} height={500} alt="noulis" src="/usual_suspects/noulis.jpg" />
+            <Header textAlign="center" level={3}>
+              Ο νονός
+              <br />
+              ψυχολόγος
+            </Header>
+            <Image
+              className={styles.suspect_img}
+              width={250}
+              height={500}
+              alt="noulis"
+              src="/usual_suspects/noulis.jpg"
+            />
             <p>Αξιολόγηση και διάγνωση καταλληλότητας προσαρμογής σε πάρτυ.</p>
           </div>
         </div>
         <div className={styles.suspects_logo}>
-          <Image width={275} height={208} alt="the usual suspects" src="/usual_suspects.png" />
-          <p>&quot;The greatest trick the devil ever pulled was convincing the world he did not exist.&quot;</p>
+          <Image
+            width={275}
+            height={208}
+            alt="the usual suspects"
+            src="/usual_suspects.png"
+          />
+          <p>
+            &quot;The greatest trick the devil ever pulled was convincing the
+            world he did not exist.&quot;
+          </p>
         </div>
       </div>
     </>

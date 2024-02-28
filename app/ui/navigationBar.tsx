@@ -20,20 +20,23 @@ export function NavigationBar(props: NavigationBarProps) {
     }
   };
   return (
-    <nav className={styles.navigation_bar}>
-      <ul className={styles.navigation_menu}>
-        {props.items.map((i) => (
-          <li
-            key={i.link}
-            onClick={() => handleClick(i.link)}
-            className={`${styles.navigation_item} ${
-              i.link === props.active ? styles.active : undefined
-            }`}
-          >
-            {i.text}
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <>
+      <nav role="navigation" className={styles.desktop_navigation_bar}>
+        <ul className={styles.navigation_menu}>
+          {props.items.map((i) => (
+            <li
+              key={i.link}
+              onClick={() => handleClick(i.link)}
+              className={`${styles.navigation_item} ${
+                i.link === props.active ? styles.active : undefined
+              }`}
+            >
+              {i.text}
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <nav role="navigation" className={styles.mobile_navigation_bar}></nav>
+    </>
   );
 }

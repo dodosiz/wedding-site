@@ -31,3 +31,19 @@
   display: flex;
   justify-content: end;
 }
+
+@media only screen and (max-width: 400px) {
+  .grid_container {
+    grid-template-columns: 1fr;
+  }
+
+  .suggestions_grid_container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 2vh 23vw;
+  }
+
+  .suggestions_grid_container li {
+    list-style: none;
+  }
+}

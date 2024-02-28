@@ -42,7 +42,7 @@
 }
 
 .suspect_img {
-  transition: transform .5s ease;
+  transition: transform 0.5s ease;
 }
 
 .suspect_img:hover {
@@ -118,4 +118,38 @@
   background-size: cover;
   height: 100%;
   transition: all 1s ease-out;
+}
+
+@media only screen and (max-width: 400px) {
+  .home_background0 {
+    background: url("/carousel/mobile/1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .home_background1 {
+    background: url("/carousel/mobile/2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .home_background2 {
+    background: url("/carousel/mobile/3.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .home_background3 {
+    background: url("/carousel/mobile/4.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .arrow {
+    color: white;
+    width: 25px;
+  }
+  .suspects_grid {
+    grid-template-columns: 1fr;
+  }
 }

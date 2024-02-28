@@ -28,8 +28,18 @@ export function LocationSection() {
           }
         </p>
         <div className={styles.location_pin_container}>
-          <Image src="/church.png" width={640} height={360} alt="church" />
-          <a href="https://maps.app.goo.gl/GKHcszwbC9EM9fHp9" target="_blank" className={styles.pin_link}>
+          <Image
+            layout="responsive"
+            src="/church.png"
+            width={640}
+            height={360}
+            alt="church"
+          />
+          <a
+            href="https://maps.app.goo.gl/GKHcszwbC9EM9fHp9"
+            target="_blank"
+            className={styles.pin_link}
+          >
             <Image src="/pin.gif" width={100} height={100} alt="pin" />
           </a>
         </div>

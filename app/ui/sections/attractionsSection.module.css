@@ -1,59 +1,65 @@
 .attractions_section {
-    background-color: #f7f5ed;
+  background-color: #f7f5ed;
 }
 
 .attractions_grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 20px;
 }
 
 .attractions_grid_item {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
 }
 
 .attractions_grid_item_with_gap {
-    display: flex;
-    flex-direction: column;
-    gap: 100px;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  justify-content: center;
 }
 
 .img_placeholder {
-    width: 150px;
-    height: 280px;
-    transition: transform .5s ease;
+  width: 150px;
+  height: 280px;
+  transition: transform 0.5s ease;
 }
 
 .attraction_img {
-    border-radius: 10px;
+  border-radius: 10px;
 }
 
 .img_placeholder.img_placeholder_grow {
-    transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
 }
 
 .img_placeholder.img_placeholder_shrink {
-    transform: scale(0.8, 0.8);
+  transform: scale(0.8, 0.8);
 }
-  
+
 .text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    display: none;
-    font-weight: 400;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: none;
+  font-weight: 400;
 }
 
 .img_placeholder:hover > .text {
-    display: block;
+  display: block;
 }
 
 .img_placeholder:hover > .attraction_img {
-    opacity: 0.5;
+  opacity: 0.5;
+}
+
+@media only screen and (max-width: 400px) {
+  .attractions_grid {
+    grid-template-columns: 1fr;
+  }
 }

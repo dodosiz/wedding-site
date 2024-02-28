@@ -1,4 +1,4 @@
-.navigation_bar {
+.desktop_navigation_bar {
   position: fixed;
   background-color: rgba(255, 255, 255, 0.4);
   width: 100vw;
@@ -29,4 +29,14 @@
 
 .navigation_item.active {
   font-weight: bolder;
+}
+
+.mobile_navigation_bar {
+  display: none;
+}
+
+@media only screen and (max-width: 400px) {
+  .desktop_navigation_bar {
+    display: none;
+  }
 }

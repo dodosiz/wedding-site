@@ -22,6 +22,7 @@ export function AccomondationSection() {
             height={447}
             alt="where to stay"
             src="/houses.png"
+            layout="responsive"
           />
         </div>
         <div>
