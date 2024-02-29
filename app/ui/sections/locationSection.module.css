@@ -33,6 +33,7 @@
 @media only screen and (max-width: 400px) {
   .pin_link {
     top: 0;
+    text-align: center;
   }
   .ermoupolis_background {
     background: url("/mobile.png");
