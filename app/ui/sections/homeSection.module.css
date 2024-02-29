@@ -8,11 +8,11 @@
   color: white;
   margin-top: 70px;
   width: 100%;
-  height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 5%;
 }
 
 .home_suspects_container {
@@ -82,6 +82,15 @@
 .arrow.right {
   float: right;
   color: white;
+}
+
+.timeline_title {
+  margin-top: 5%;
+  font-size: 2em;
+}
+
+.timeline_container {
+  padding: 5% 15%;
 }
 
 .home_background0 {

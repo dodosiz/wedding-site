@@ -50,6 +50,10 @@ export function HomeSection() {
         <h2 style={{ margin: 0 }}>Κυριακή</h2>
         <h2 style={{ margin: 0 }}>28 Ιουλίου 2024</h2>
         <p style={{ margin: 0 }}>Ερμούπολη, Σύρος</p>
+        <h2 className={styles.timeline_title}>Weekend Timeline</h2>
+        <div className={styles.timeline_container}>
+          <Image src="/timeline.jpg"  alt="timeline" width={4961} height={2607} layout="responsive" />
+        </div>
       </div>
       <div className={styles.home_suspects_container}>
         <Header textAlign="center">

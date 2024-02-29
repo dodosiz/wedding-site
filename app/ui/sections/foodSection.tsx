@@ -9,7 +9,6 @@ export function FoodSection() {
       <div className={styles.grid_container}>
         <div className={styles.flex_container_left}>
           <Image
-            layout="responsive"
             className={styles.food_image}
             width={380}
             height={600}
@@ -19,7 +18,6 @@ export function FoodSection() {
         </div>
         <div className={styles.flex_container_right}>
           <Image
-            layout="responsive"
             className={styles.food_image}
             width={600}
             height={390}
@@ -27,10 +25,36 @@ export function FoodSection() {
             src="/food1.JPG"
           />
           <Image
-            layout="responsive"
             className={styles.food_image}
             width={420}
             height={220}
+            alt="table by the sea"
+            src="/food3.JPG"
+          />
+        </div>
+      </div>
+      <div className={styles.grid_container_mobile}>
+        <div className={styles.flex_container_left}>
+          <Image
+            className={styles.food_image}
+            width={117}
+            height={190}
+            alt="eating outside"
+            src="/food4.JPG"
+          />
+        </div>
+        <div className={styles.flex_container_right}>
+          <Image
+            className={styles.food_image}
+            width={190}
+            height={120}
+            alt="table with rose wine"
+            src="/food1.JPG"
+          />
+          <Image
+            className={styles.food_image}
+            width={130}
+            height={63}
             alt="table by the sea"
             src="/food3.JPG"
           />

@@ -5,6 +5,10 @@
   padding: 20px 10%;
 }
 
+.grid_container_mobile {
+  display: none;
+}
+
 .suggestions_grid_container {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -36,7 +40,7 @@
 
 @media only screen and (max-width: 400px) {
   .flex_container_left {
-    padding-top: 0;
+    padding-top: 20px;
   }
 
   .suggestions_grid_container {
@@ -47,5 +51,20 @@
 
   .suggestions_grid_container ul {
     margin-bottom: 70px;
+  }
+
+  .grid_container_mobile {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 10px;
+    padding: 20px 10%;
+  }
+
+  .flex_container_right {
+    gap: 10px;
+  }
+  
+  .grid_container {
+    display: none;
   }
 }
