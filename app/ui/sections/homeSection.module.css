@@ -122,25 +122,25 @@
 
 @media only screen and (max-width: 400px) {
   .home_background0 {
-    background: url("/carousel/mobile/1.png");
+    background: url("/carousel/mobile/cover2.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
   .home_background1 {
-    background: url("/carousel/mobile/2.png");
+    background: url("/carousel/mobile/cover2.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
   .home_background2 {
-    background: url("/carousel/mobile/3.png");
+    background: url("/carousel/mobile/cover2.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
   .home_background3 {
-    background: url("/carousel/mobile/4.png");
+    background: url("/carousel/mobile/cover2.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
