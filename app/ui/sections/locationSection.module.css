@@ -36,15 +36,15 @@
     text-align: center;
   }
   .ermoupolis_background {
-    background: url("/mobile.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    display: none;
   }
   .church_mobile {
     display: block;
   }
   .church_desktop {
     display: none;
+  }
+  .location_image_container {
+    height: auto;
   }
 }

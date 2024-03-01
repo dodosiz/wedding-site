@@ -54,6 +54,9 @@ export function HomeSection() {
         <div className={styles.timeline_container}>
           <Image src="/timeline.jpg"  alt="timeline" width={4961} height={2607} layout="responsive" />
         </div>
+        <div className={styles.timeline_container_mobile}>
+          <Image src="/timeline_mobile.jpg"  alt="timeline" width={1242} height={2208} layout="responsive" />
+        </div>
       </div>
       <div className={styles.home_suspects_container}>
         <Header textAlign="center">

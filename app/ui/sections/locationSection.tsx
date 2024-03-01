@@ -8,6 +8,14 @@ export function LocationSection() {
     <>
       <div className={styles.location_image_container}>
         <div className={styles.ermoupolis_background}></div>
+        <Image
+            layout="responsive"
+            src="/church1.JPG"
+            className={styles.church_mobile}
+            width={1449}
+            height={968}
+            alt="church mobile"
+          />
       </div>
       <div className={common.text_container}>
         <Header textAlign="center">{"Η Τοποθεσία"}</Header>

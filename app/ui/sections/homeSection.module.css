@@ -93,6 +93,10 @@
   padding: 5% 15%;
 }
 
+.timeline_container_mobile {
+  display: none;
+}
+
 .home_background0 {
   background: url("/carousel/cover1.jpg");
   background-repeat: no-repeat;
@@ -166,5 +170,12 @@
   }
   .home_suspects_container {
     padding-top: 20px;
+  }
+  .timeline_container_mobile {
+    padding: 5% 15%;
+    display: block;
+  }
+  .timeline_container {
+    display: none;
   }
 }
