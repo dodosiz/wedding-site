@@ -7,6 +7,7 @@ import Image from "next/image";
 export function HomeSection() {
   const [counter, setCounter] = useState(0);
   const [top, setTop] = useState(0);
+  const [topTimeline, setTopTimeline] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -23,6 +24,8 @@ export function HomeSection() {
     const handleScroll = () => {
       const letter2 = document.getElementById("2");
       const letterMobile = document.getElementById("2_mobile");
+      const timeline = document.getElementById("timeline");
+      const timelineMobile = document.getElementById("timeline_mobile");
       if (letter2) {
         const top = Math.round(letter2.getBoundingClientRect().top) || 0;
         if (top > 0) {
@@ -34,6 +37,20 @@ export function HomeSection() {
           (Math.round(letterMobile.getBoundingClientRect().top) || 0) - 100;
         if (top > 0) {
           setTop(top);
+        }
+      }
+      if (timeline) {
+        const top =
+          (Math.round(timeline.getBoundingClientRect().top) || 0);
+        if (top > 0) {
+          setTopTimeline(top);
+        }
+      }
+      if (timelineMobile) {
+        const top =
+          (Math.round(timelineMobile.getBoundingClientRect().top) || 0);
+        if (top > 0) {
+          setTopTimeline(top);
         }
       }
     };
@@ -131,7 +148,7 @@ export function HomeSection() {
           </div>
           <div></div>
         </div>
-        <div className={styles.timeline_container}>
+        <div className={styles.timeline_container} id="timeline" style={{ opacity: `${100 - topTimeline}%` }}>
           <Image
             src="/timeline.jpg"
             alt="timeline"
@@ -140,7 +157,7 @@ export function HomeSection() {
             layout="responsive"
           />
         </div>
-        <div className={styles.timeline_container_mobile}>
+        <div className={styles.timeline_container_mobile} id="timeline_mobile"  style={{ opacity: `${100 - topTimeline}%` }}>
           <Image
             src="/timeline_mobile.jpg"
             alt="timeline"
@@ -226,6 +243,29 @@ export function HomeSection() {
             />
             <p>Αξιολόγηση και διάγνωση καταλληλότητας προσαρμογής σε πάρτυ.</p>
           </div>
+        </div>
+        <div className={styles.suspects_mobile}>
+           <Image
+              width={1125}
+              height={1288}
+              layout="responsive"
+              alt="theo"
+              src="/usual_suspects/mobile/0.png"
+            />
+            <Image
+              width={1125}
+              height={2436}
+              layout="responsive"
+              alt="natalia and artemis"
+              src="/usual_suspects/mobile/1.png"
+            />
+            <Image
+              width={1125}
+              height={2436}
+              layout="responsive"
+              alt="noulis and ales"
+              src="/usual_suspects/mobile/2.png"
+            />
         </div>
         <div className={styles.suspects_logo}>
           <Image

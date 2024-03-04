@@ -181,6 +181,10 @@
   height: 700px;
 }
 
+.suspects_mobile {
+  display: none;
+}
+
 @media only screen and (max-width: 480px) {
   .home_background0 {
     background: url("/carousel/mobile/cover2.jpg");
@@ -211,7 +215,12 @@
     width: 25px;
   }
   .suspects_grid {
-    grid-template-columns: 1fr;
+    display: none;
+  }
+  .suspects_mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
   .suspects_logo {
     width: 180px;

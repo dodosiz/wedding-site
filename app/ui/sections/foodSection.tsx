@@ -10,8 +10,15 @@ export function FoodSection() {
   useEffect(() => {
     const handleScroll = () => {
       const grid = document.getElementById("grid");
+      const gridMobile = document.getElementById("grid_mobile");
       if (grid) {
         const top = Math.round(grid.getBoundingClientRect().top) || 0;
+        if (top > 0) {
+          setTop(top);
+        }
+      }
+      if (gridMobile) {
+        const top = (Math.round(gridMobile.getBoundingClientRect().top) || 0) - 100;
         if (top > 0) {
           setTop(top);
         }
@@ -55,12 +62,13 @@ export function FoodSection() {
           />
         </div>
       </div>
-      <div className={styles.grid_container_mobile}>
+      <div className={styles.grid_container_mobile} id="grid_mobile">
         <div className={styles.flex_container_left}>
           <Image
             className={styles.food_image}
             width={117}
             height={190}
+            style={{ right: top }}
             alt="eating outside"
             src="/food4.JPG"
           />
@@ -70,6 +78,7 @@ export function FoodSection() {
             className={styles.food_image}
             width={190}
             height={120}
+            style={{ left: top }}
             alt="table with rose wine"
             src="/food1.JPG"
           />
@@ -77,6 +86,7 @@ export function FoodSection() {
             className={styles.food_image}
             width={130}
             height={63}
+            style={{ left: top }}
             alt="table by the sea"
             src="/food3.JPG"
           />
