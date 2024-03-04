@@ -58,7 +58,7 @@
   opacity: 0.5;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 480px) {
   .img_placeholder {
     width: 60px;
     height: 125px;

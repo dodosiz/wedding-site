@@ -30,7 +30,7 @@
   display: block;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 480px) {
   .pin_link {
     top: 0;
     text-align: center;
