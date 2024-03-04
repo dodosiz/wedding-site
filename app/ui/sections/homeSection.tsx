@@ -48,7 +48,7 @@ export function HomeSection() {
       }
       if (timelineMobile) {
         const top =
-          (Math.round(timelineMobile.getBoundingClientRect().top) || 0);
+          (Math.round(timelineMobile.getBoundingClientRect().top) || 0) - 100;
         if (top > 0) {
           setTopTimeline(top);
         }
