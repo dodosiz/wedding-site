@@ -6,6 +6,7 @@ import Image from "next/image";
 
 export function HomeSection() {
   const [counter, setCounter] = useState(0);
+  const [top, setTop] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -17,6 +18,29 @@ export function HomeSection() {
     }, 5000);
     return () => clearInterval(interval);
   });
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const letter2 = document.getElementById("2");
+      const letterMobile = document.getElementById("2_mobile");
+      if (letter2) {
+        const top = Math.round(letter2.getBoundingClientRect().top) || 0; 
+        if (top > 0) {
+          setTop(top);
+        }
+      }
+      if (letterMobile) {
+        const top = (Math.round(letterMobile.getBoundingClientRect().top) || 0) - 100; 
+        if (top > 0) {
+          setTop(top);
+        }
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const next = () => {
     if (counter > 2) {
@@ -46,11 +70,28 @@ export function HomeSection() {
         </div>
       </div>
       <div className={styles.home_text_container}>
-        <Header textAlign="center">Save the Date</Header>
-        <h2 style={{ margin: 0 }}>Κυριακή</h2>
-        <h2 style={{ margin: 0 }}>28 Ιουλίου 2024</h2>
-        <p style={{ margin: 0 }}>Ερμούπολη, Σύρος</p>
-        <h2 className={styles.timeline_title}>Weekend Timeline</h2>
+        <div className={styles.save_the_date_grid}>
+          <div></div>
+          <div id="2" className={styles.save_the_date_letter_2} style={{right: top}}>
+            <Image src="/save_the_date/letter2.png"  alt="letter 2" width={307} height={441} />
+          </div>
+          <div id="2_mobile" className={styles.save_the_date_letter_2_mobile} style={{right: top}}>
+            <Image src="/save_the_date/letter2.png"  alt="letter 2" width={112} height={161} />
+          </div>
+          <div className={styles.save_the_date_text}>
+            <p className={styles.timeline_date}>Κυριακή<br/>28 Ιουλίου 2024</p>
+            <p className={styles.timeline_place}>Ερμούπολη, Σύρος</p>
+            <h2 className={styles.timeline_title}>Weekend Timeline</h2>
+            <p className={styles.timeline_silenced}>27-28 Ιουλίου</p>
+          </div>
+          <div className={styles.save_the_date_letter_8} style={{left: top}}>
+            <Image src="/save_the_date/letter8.png"  alt="letter 8" width={307} height={441} />
+          </div>
+          <div className={styles.save_the_date_letter_8_mobile}  style={{left: top}}>
+            <Image src="/save_the_date/letter8.png"  alt="letter 8" width={112} height={161} />
+          </div>
+          <div></div>
+        </div>
         <div className={styles.timeline_container}>
           <Image src="/timeline.jpg"  alt="timeline" width={4961} height={2607} layout="responsive" />
         </div>
