@@ -28,28 +28,28 @@ export function HomeSection() {
       const timelineMobile = document.getElementById("timeline_mobile");
       if (letter2) {
         const top = Math.round(letter2.getBoundingClientRect().top) || 0;
-        if (top > 0) {
+        if (top > 0 && top < 500) {
           setTop(top);
         }
       }
       if (letterMobile) {
         const top =
           (Math.round(letterMobile.getBoundingClientRect().top) || 0) - 100;
-        if (top > 0) {
+        if (top > 0 && top < 100) {
           setTop(top);
         }
       }
       if (timeline) {
         const top =
           (Math.round(timeline.getBoundingClientRect().top) || 0);
-        if (top > 0) {
+        if (top > 0 && top < 500) {
           setTopTimeline(top);
         }
       }
       if (timelineMobile) {
         const top =
           (Math.round(timelineMobile.getBoundingClientRect().top) || 0) - 100;
-        if (top > 0) {
+        if (top > 0 && top < 100) {
           setTopTimeline(top);
         }
       }
