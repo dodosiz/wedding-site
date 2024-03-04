@@ -3,34 +3,16 @@ import Image from "next/image";
 import styles from "./foodSection.module.css";
 import common from "./common.module.css";
 import { Header } from "../header";
-import { useEffect, useState } from "react";
 
 export function FoodSection() {
-  const [top, setTop] = useState(0);
-  useEffect(() => {
-    const handleScroll = () => {
-      const grid = document.getElementById("grid");
-      if (grid) {
-        const top = Math.round(grid.getBoundingClientRect().top) || 0;
-        if (top > 0 && top < 500) {
-          setTop(top);
-        }
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
   return (
     <>
-      <div className={styles.grid_container} id="grid">
+      <div className={styles.grid_container}>
         <div className={styles.flex_container_left}>
           <Image
             className={styles.food_image}
             width={380}
             height={600}
-            style={{ right: top }}
             alt="eating outside"
             src="/food4.JPG"
           />
@@ -40,7 +22,6 @@ export function FoodSection() {
             className={styles.food_image}
             width={600}
             height={390}
-            style={{ left: top }}
             alt="table with rose wine"
             src="/food1.JPG"
           />
@@ -49,7 +30,6 @@ export function FoodSection() {
             id="image"
             width={420}
             height={220}
-            style={{ left: top }}
             alt="table by the sea"
             src="/food3.JPG"
           />
