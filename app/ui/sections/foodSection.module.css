@@ -29,6 +29,7 @@
 
 .food_image {
   border-radius: 10px;
+  position: relative;
 }
 
 .side_gif {
@@ -63,7 +64,7 @@
   .flex_container_right {
     gap: 10px;
   }
-  
+
   .grid_container {
     display: none;
   }
