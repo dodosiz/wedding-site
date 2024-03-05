@@ -2,17 +2,15 @@
   display: grid;
   grid-template-columns: 2fr 3fr;
   gap: 20px;
-  padding: 10%;
+  padding: 5% 10%;
 }
 
 .grid_container_mobile {
   display: none;
 }
 
-.suggestions_grid_container {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  padding: 20px 20%;
+.food_header {
+  margin-top: 10%;
 }
 
 .flex_container_left {
@@ -41,16 +39,6 @@
 @media only screen and (max-width: 480px) {
   .flex_container_left {
     padding-top: 20px;
-  }
-
-  .suggestions_grid_container {
-    grid-template-columns: 1fr;
-    text-align: justify;
-    padding: 20px 10%;
-  }
-
-  .suggestions_grid_container ul {
-    margin-bottom: 70px;
   }
 
   .grid_container_mobile {

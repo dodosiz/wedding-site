@@ -41,5 +41,6 @@
   }
   .mobile_navigation_bar {
     display: block;
+    z-index: 99;
   }
 }

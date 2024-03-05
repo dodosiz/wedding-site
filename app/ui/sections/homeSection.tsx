@@ -7,9 +7,10 @@ import Image from "next/image";
 export function HomeSection() {
   const DESKTOP_OFFSET = 500;
   const MOBILE_OFFSET = 100;
+  const MOBILE_TOP_OFFSET = 40;
 
   const [counter, setCounter] = useState(0);
-  const [topMobile, setTopMobile] = useState(MOBILE_OFFSET);
+  const [topMobile, setTopMobile] = useState(MOBILE_TOP_OFFSET);
   const [topDesktop, setTopDesktop] = useState(DESKTOP_OFFSET);
   const [topTimelineDesktop, setTopTimelineDesktop] = useState(DESKTOP_OFFSET);
   const [topTimelineMobile, setTopTimelineMobile] = useState(MOBILE_OFFSET);
@@ -39,8 +40,8 @@ export function HomeSection() {
       }
       if (letterMobile) {
         const measured =
-          (Math.round(letterMobile.getBoundingClientRect().top) || 0) - MOBILE_OFFSET;
-        if (measured > 0 && measured < MOBILE_OFFSET) {
+          (Math.round(letterMobile.getBoundingClientRect().top) || 0) - MOBILE_TOP_OFFSET;
+        if (measured > 0 && measured < MOBILE_TOP_OFFSET) {
           setTopMobile(measured);
         }
       }
