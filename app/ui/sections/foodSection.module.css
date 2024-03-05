@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 2fr 3fr;
   gap: 20px;
-  padding: 20px 10%;
+  padding: 10%;
 }
 
 .grid_container_mobile {

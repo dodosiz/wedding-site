@@ -6,13 +6,14 @@ interface HeaderProps {
   children?: React.ReactNode;
   level?: number;
   textAlign: "center" | "left";
+  className?: string;
 }
 
 export function Header(props: HeaderProps) {
   if (props.level === 2) {
-    return <h2 className={serif.className} style={{textAlign: props.textAlign}}>{props.children}</h2>;
+    return <h2 className={`${serif.className} ${props.className}`} style={{textAlign: props.textAlign}}>{props.children}</h2>;
   } else if (props.level === 3) {
-    return <h3 className={serif.className} style={{textAlign: props.textAlign}}>{props.children}</h3>;
+    return <h3 className={`${serif.className} ${props.className}`} style={{textAlign: props.textAlign}}>{props.children}</h3>;
   }
-  return <h1 className={serif.className} style={{textAlign: props.textAlign}}>{props.children}</h1>;
+  return <h1 className={`${serif.className} ${props.className}`} style={{textAlign: props.textAlign}}>{props.children}</h1>;
 }
