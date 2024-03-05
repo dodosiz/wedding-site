@@ -30,11 +30,7 @@ export function LocationSection() {
             18:00 στις 28 Ιουλίου 2024.
           </a>
         </p>
-        <p>
-          {
-            "Στη συνέχεια θα κατευθυνθούμε λίγο πιο κάτω στο secret location. Εκεί θα απολαύσουμε το μενού που μας ετοίμασε το Catering Ζοζεφίνος, πάντα με συνοδεία δροσιστικά Coctail."
-          }
-        </p>
+        <p>Στη συνέχεια θα κατευθυνθούμε στην βίλλα 3 lagoons, όπου και θα πραγματοποιηθεί η γαμήλια δεξίωση.</p>
         <div className={styles.location_pin_container}>
           <Image
             layout="responsive"
