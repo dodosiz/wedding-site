@@ -181,6 +181,10 @@
   height: 700px;
 }
 
+.save_the_date_text_mobile {
+  display: none;
+}
+
 .suspects_mobile {
   display: none;
 }
@@ -242,6 +246,13 @@
     margin-bottom: 30px;
   }
   .save_the_date_text {
+    display: none;
+  }
+  .save_the_date_text_mobile {
+    text-align: center;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
     font-size: 0.5em;
     height: 250px;
   }

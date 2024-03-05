@@ -5,9 +5,14 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
 export function HomeSection() {
+  const DESKTOP_OFFSET = 500;
+  const MOBILE_OFFSET = 100;
+
   const [counter, setCounter] = useState(0);
-  const [top, setTop] = useState(0);
-  const [topTimeline, setTopTimeline] = useState(0);
+  const [topMobile, setTopMobile] = useState(MOBILE_OFFSET);
+  const [topDesktop, setTopDesktop] = useState(DESKTOP_OFFSET);
+  const [topTimelineDesktop, setTopTimelineDesktop] = useState(DESKTOP_OFFSET);
+  const [topTimelineMobile, setTopTimelineMobile] = useState(MOBILE_OFFSET);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -27,30 +32,30 @@ export function HomeSection() {
       const timeline = document.getElementById("timeline");
       const timelineMobile = document.getElementById("timeline_mobile");
       if (letter2) {
-        const top = Math.round(letter2.getBoundingClientRect().top) || 0;
-        if (top > 0 && top < 500) {
-          setTop(top);
+        const measured = Math.round(letter2.getBoundingClientRect().top) || 0;
+        if (measured > 0 && measured < DESKTOP_OFFSET) {
+          setTopDesktop(measured);
         }
       }
       if (letterMobile) {
-        const top =
-          (Math.round(letterMobile.getBoundingClientRect().top) || 0) - 100;
-        if (top > 0 && top < 100) {
-          setTop(top);
+        const measured =
+          (Math.round(letterMobile.getBoundingClientRect().top) || 0) - MOBILE_OFFSET;
+        if (measured > 0 && measured < MOBILE_OFFSET) {
+          setTopMobile(measured);
         }
       }
       if (timeline) {
-        const top =
-          (Math.round(timeline.getBoundingClientRect().top) || 0);
-        if (top > 0 && top < 500) {
-          setTopTimeline(top);
+        const measured =
+          (Math.round(timeline.getBoundingClientRect().top) || 0) - 300;
+        if (measured > 0 && measured < DESKTOP_OFFSET) {
+          setTopTimelineDesktop(measured);
         }
       }
       if (timelineMobile) {
-        const top =
-          (Math.round(timelineMobile.getBoundingClientRect().top) || 0) - 100;
-        if (top > 0 && top < 100) {
-          setTopTimeline(top);
+        const measured =
+          (Math.round(timelineMobile.getBoundingClientRect().top) || 0) - MOBILE_OFFSET;
+        if (measured > 0 && measured < MOBILE_OFFSET) {
+          setTopTimelineMobile(measured);
         }
       }
     };
@@ -93,7 +98,7 @@ export function HomeSection() {
           <div
             id="2"
             className={styles.save_the_date_letter_2}
-            style={{ right: top }}
+            style={{ right: topDesktop }}
           >
             <Image
               src="/save_the_date/letter2.png"
@@ -105,7 +110,7 @@ export function HomeSection() {
           <div
             id="2_mobile"
             className={styles.save_the_date_letter_2_mobile}
-            style={{ right: top }}
+            style={{ right: topMobile }}
           >
             <Image
               src="/save_the_date/letter2.png"
@@ -116,7 +121,7 @@ export function HomeSection() {
           </div>
           <div
             className={styles.save_the_date_text}
-            style={{ opacity: `${100 - top}%` }}
+            style={{ opacity: `${100 - topDesktop}%` }}
           >
             <p className={styles.timeline_date}>
               Κυριακή
@@ -127,7 +132,23 @@ export function HomeSection() {
             <h2 className={styles.timeline_title}>Weekend Timeline</h2>
             <p className={styles.timeline_silenced}>27-28 Ιουλίου</p>
           </div>
-          <div className={styles.save_the_date_letter_8} style={{ left: top }}>
+          <div
+            className={styles.save_the_date_text_mobile}
+            style={{ opacity: `${100 - topMobile}%` }}
+          >
+            <p className={styles.timeline_date}>
+              Κυριακή
+              <br />
+              28 Ιουλίου 2024
+            </p>
+            <p className={styles.timeline_place}>Ερμούπολη, Σύρος</p>
+            <h2 className={styles.timeline_title}>Weekend Timeline</h2>
+            <p className={styles.timeline_silenced}>27-28 Ιουλίου</p>
+          </div>
+          <div
+            className={styles.save_the_date_letter_8}
+            style={{ left: topDesktop }}
+          >
             <Image
               src="/save_the_date/letter8.png"
               alt="letter 8"
@@ -137,7 +158,7 @@ export function HomeSection() {
           </div>
           <div
             className={styles.save_the_date_letter_8_mobile}
-            style={{ left: top }}
+            style={{ left: topMobile }}
           >
             <Image
               src="/save_the_date/letter8.png"
@@ -148,7 +169,7 @@ export function HomeSection() {
           </div>
           <div></div>
         </div>
-        <div className={styles.timeline_container} id="timeline" style={{ opacity: `${100 - topTimeline}%` }}>
+        <div className={styles.timeline_container} id="timeline" style={{ opacity: `${100 - topTimelineDesktop}%` }}>
           <Image
             src="/timeline.jpg"
             alt="timeline"
@@ -157,7 +178,7 @@ export function HomeSection() {
             layout="responsive"
           />
         </div>
-        <div className={styles.timeline_container_mobile} id="timeline_mobile"  style={{ opacity: `${100 - topTimeline}%` }}>
+        <div className={styles.timeline_container_mobile} id="timeline_mobile"  style={{ opacity: `${100 - topTimelineMobile}%` }}>
           <Image
             src="/timeline_mobile.jpg"
             alt="timeline"
