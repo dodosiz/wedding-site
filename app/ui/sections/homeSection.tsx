@@ -209,7 +209,7 @@ export function HomeSection() {
               alt="theo"
               src="/usual_suspects/theo.jpg"
             />
-            <p>Αυτός που πληρώνει την νύφη.</p>
+            <p>Full-stack προγραμματισμός πάρτυ.</p>
           </div>
           <div className={styles.suspects_grid_item}>
             <Header textAlign="center" level={3}>
@@ -224,7 +224,7 @@ export function HomeSection() {
               alt="natalia"
               src="/usual_suspects/natalia.jpg"
             />
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            <p>Σχεδιασμός και οργάνωση πάρτυ με γεωμετρική ακρίβεια.</p>
           </div>
           <div className={styles.suspects_grid_item}>
             <Header textAlign="center" level={3}>
@@ -233,7 +233,7 @@ export function HomeSection() {
               τσουρεκάκι
             </Header>
             <div className={styles.suspects_grid_box}></div>
-            <p>Η μικρή ταραξίας</p>
+            <p>Υπεύθυνη ψυχαγωγίας και διατάραξης κοινής ησυχίας.</p>
           </div>
           <div className={styles.suspects_grid_item}>
             <Header textAlign="center" level={3}>

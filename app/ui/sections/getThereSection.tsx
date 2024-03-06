@@ -3,6 +3,7 @@ import common from "./common.module.css";
 import { Header } from "../header";
 import { ChevronRightIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
+import Image from "next/image";
 
 export function GetThereSection() {
   const [showShip, setShowShip] = useState(false);
@@ -32,21 +33,24 @@ export function GetThereSection() {
       </div>
       <div className={styles.grid_container}>
         <div>
-          <h2
-            className={`${styles.text_center} ${styles.clickable}`}
-            onClick={() =>
-              handleClick(showShip, () => {
-                setShowShip(!showShip);
-              })
-            }
-          >
-            ΑΚΤΟΠΛΟΙΚΗ ΜΕΤΑΚΙΝΗΣΗ{" "}
-            {showShip ? (
-              <ChevronDownIcon style={{ width: "15px" }} />
-            ) : (
-              <ChevronRightIcon style={{ width: "15px" }} />
-            )}
-          </h2>
+          <div className={styles.transition_title}>
+            <Image src="/transition/ship.png" width={40} height={40} alt="ship" />
+            <h2
+              className={`${styles.text_center} ${styles.clickable}`}
+              onClick={() =>
+                handleClick(showShip, () => {
+                  setShowShip(!showShip);
+                })
+              }
+            >
+              ΑΚΤΟΠΛΟΙΚΗ ΜΕΤΑΚΙΝΗΣΗ{" "}
+              {showShip ? (
+                <ChevronDownIcon style={{ width: "15px" }} />
+              ) : (
+                <ChevronRightIcon style={{ width: "15px" }} />
+              )}
+            </h2>
+          </div>
           <p className={getClassName(showShip)}>
             Η σύνδεση είναι καθημερινή με δρομολόγια από και προς τα λιμάνια:
             Πειραιά, (διάρκεια: 4 ώρες με συμβατικό πλοίο της γραμμής ή 2,5 ώρες
@@ -64,21 +68,24 @@ export function GetThereSection() {
           </p>
         </div>
         <div>
-          <h2
-            className={`${styles.text_center} ${styles.clickable}`}
-            onClick={() =>
-              handleClick(showPlane, () => {
-                setShowPlane(!showPlane);
-              })
-            }
-          >
-            ΑΕΡΟΠΟΡΙΚΩΣ{" "}
-            {showPlane ? (
-              <ChevronDownIcon style={{ width: "15px" }} />
-            ) : (
-              <ChevronRightIcon style={{ width: "15px" }} />
-            )}
-          </h2>
+          <div className={styles.transition_title}>
+            <Image src="/transition/airplane.png" width={40} height={40} alt="airplane" />
+            <h2
+              className={`${styles.text_center} ${styles.clickable}`}
+              onClick={() =>
+                handleClick(showPlane, () => {
+                  setShowPlane(!showPlane);
+                })
+              }
+            >
+              ΑΕΡΟΠΟΡΙΚΩΣ{" "}
+              {showPlane ? (
+                <ChevronDownIcon style={{ width: "15px" }} />
+              ) : (
+                <ChevronRightIcon style={{ width: "15px" }} />
+              )}
+            </h2>
+          </div>
           <p className={getClassName(showPlane)}>
             Σε καθημερινή βάση εκτελούνται πτήσεις από Αθήνα προς Σύρο και
             αντίστροφα, με την πτήση να διαρκεί μόλις 25 λεπτά.

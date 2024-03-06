@@ -26,8 +26,8 @@ export function AttractionsSection() {
             {
               index: 0,
               path: "/attractions/dhmarxeio.jpg",
-              text: "Δημαρχείο της Σύρου",
-              link: "https://maps.app.goo.gl/odZ57ujvQKHnhPe37",
+              text: "Η Πλατεία Μιαούλη",
+              link: "https://maps.app.goo.gl/315s56Zdfz2zayEn8",
             },
           ]}
         />
@@ -93,8 +93,8 @@ export function AttractionsSection() {
             {
               index: 7,
               path: "/attractions/dhmarxeio2.jpg",
-              text: "Η Πλατεία Μιαούλη",
-              link: "https://maps.app.goo.gl/315s56Zdfz2zayEn8",
+              text: "Δημαρχείο της Σύρου",
+              link: "https://maps.app.goo.gl/odZ57ujvQKHnhPe37",
             },
           ]}
         />

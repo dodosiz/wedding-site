@@ -17,9 +17,20 @@
   justify-items: center;
 }
 
+.pins_grid {
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+  align-items: center;
+}
+
+.pins_flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .pin_link {
-  position: relative;
-  top: -80px;
+  width: 150px;
 }
 
 .church_mobile {

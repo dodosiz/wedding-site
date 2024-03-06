@@ -24,6 +24,13 @@
   animation-name: fadeIn;
 }
 
+.transition_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0%;
