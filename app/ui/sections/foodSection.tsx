@@ -7,99 +7,20 @@ import { Header } from "../header";
 export function FoodSection() {
   return (
     <>
-      <Header className={styles.food_header} textAlign="center">Γευστικές περιηγήσεις</Header>
-      <div className={styles.grid_container}>
-        <div className={styles.flex_container_left}>
-          <Image
-            className={styles.food_image}
-            width={380}
-            height={600}
-            alt="eating outside"
-            src="/food4.JPG"
-          />
-        </div>
-        <div className={styles.flex_container_right}>
-          <Image
-            className={styles.food_image}
-            width={600}
-            height={390}
-            alt="table with rose wine"
-            src="/food1.JPG"
-          />
-          <Image
-            className={styles.food_image}
-            id="image"
-            width={420}
-            height={220}
-            alt="table by the sea"
-            src="/food3.JPG"
-          />
-        </div>
-      </div>
-      <div className={styles.grid_container_mobile}>
-        <div className={styles.flex_container_left}>
-          <Image
-            className={styles.food_image}
-            width={117}
-            height={190}
-            alt="eating outside"
-            src="/food4.JPG"
-          />
-        </div>
-        <div className={styles.flex_container_right}>
-          <Image
-            className={styles.food_image}
-            width={190}
-            height={120}
-            alt="table with rose wine"
-            src="/food1.JPG"
-          />
-          <Image
-            className={styles.food_image}
-            width={130}
-            height={63}
-            alt="table by the sea"
-            src="/food3.JPG"
-          />
-        </div>
-      </div>
-      <div className={common.text_container}>
-        <p>
-          Το πιο φημισμένο προϊόν του νησιού είναι το συριανό λουκούμι. Η τέχνη
-          της παρασκευής του έφτασε στη Σύρο με τους πρώτους πρόσφυγες από Χίο,
-          ενώ το έτερο συριανό προϊόν των λουκουμοποιών είναι η χαλβαδόπιτα που
-          παρασκευάζεται από θυμαρίσιο συριανό μέλι και φρεσκοψημένο αμύγδαλο. Η
-          Σύρος φημίζεται και για τα τυροκομικά της, όπως το περίφημο τυρί Σαν
-          Μιχάλη που ξεχωρίζει για τη μοναδική πικάντικη γεύση του. Στην οδό
-          Χίου θα βρείτε αρκετά μαγαζιά για να προμηθευτείτε παραδοσιακά
-          προϊόντα του νησιού.
-        </p>
-      </div>
-      <div className={common.text_container} style={{textAlign: "left", alignItems: "start"}}>
-        <p>
-          Τρεις είναι οι επαρχίες (πρώην δήμοι) που συνθέτουν τα χωριά της Σύρου:
-        </p>
-        <ul>
-          <li><strong>Ερμούπολη</strong>, που αποτελείται από την πρωτεύουσα και τα γύρω χωριά.</li>
-          <li><strong>Άνω Σύρος</strong>, με την ομώνυμη ιστορική έδρα του δήμου και τα χωριά της Σύρου που ανήκουν στην Απάνω Μεριά του νησιού, στα βόρεια.</li>
-          <li><strong>Ποσειδωνία</strong>, με τα χωριά της Σύρου που συγκεντρώνουν τη μεγαλύτερη τουριστική κίνηση στο νησί και βρίσκονται στο νότιο τμήμα.</li>
-        </ul>
-        <div className={styles.image_map}>
-          <Image
-            width={562}
-            height={659}
-            alt="Map"
-            layout="responsive"
-            src="/map.jpg"
-          />
-        </div>
-        <p>
-          Παρακάτω θα βρείτε κάποιες προτάσεις για φαγητό και για ποτό, ανά περιοχή.
-          Κάνοντας κλικ πάνω στα ονόματα θα βρεθείτε στην αντίστοιχη ιστοσελίδα του Trip Advisor.
-        </p>
-      </div>
-      <div className={common.text_container} style={{textAlign: "left", alignItems: "start"}}>
-        <h2><strong>Ταβέρνες</strong></h2>
+      <Header className={styles.food_header} textAlign="center">
+        Γευστικές περιηγήσεις
+      </Header>
+      <ImageGridDesktop />
+      <ImageGridMobile />
+      <GeneralIntro />
+      <GeographicalIntro />
+      <div
+        className={common.text_container}
+        style={{ textAlign: "left", alignItems: "start" }}
+      >
+        <h2>
+          <strong>Ταβέρνες</strong>
+        </h2>
         <h3 className={styles.location_header}>Ερμούπολη</h3>
         <ul className={styles.location_list}>
           <li>
@@ -180,7 +101,7 @@ export function FoodSection() {
         </ul>
         <h3 className={styles.location_header}>Ποσειδωνία</h3>
         <ul className={styles.location_list}>
-         <li>
+          <li>
             <a
               href="https://www.tripadvisor.com/Restaurant_Review-g1190346-d10538290-Reviews-Ono_Concept-Poseidonia_Syros_Cyclades_South_Aegean.html"
               target="_blank"
@@ -226,7 +147,9 @@ export function FoodSection() {
             (θαλασσινά και ψαράκια)
           </li>
         </ul>
-        <h2><strong>Brunch / καφέ</strong></h2>
+        <h2>
+          <strong>Brunch / καφέ</strong>
+        </h2>
         <h3 className={styles.location_header}>Ερμούπολη</h3>
         <ul className={styles.location_list}>
           <li>
@@ -293,7 +216,9 @@ export function FoodSection() {
         <ul className={styles.location_list}>
           <li>Bao Bap</li>
         </ul>
-        <h2><strong>Ποτό</strong></h2>
+        <h2>
+          <strong>Ποτό</strong>
+        </h2>
         <h3 className={styles.location_header}>Ερμούπολη</h3>
         <ul className={styles.location_list}>
           <li>
@@ -349,7 +274,9 @@ export function FoodSection() {
             (Τα πιο έμπειρα κοκτέιλ στη Σύρο)
           </li>
         </ul>
-        <h2><strong>Γλυκό</strong></h2>
+        <h2>
+          <strong>Γλυκό</strong>
+        </h2>
         <h3 className={styles.location_header}>Ερμούπολη</h3>
         <ul className={styles.location_list}>
           <li>
@@ -396,5 +323,130 @@ export function FoodSection() {
         </p>
       </div>
     </>
+  );
+}
+
+function ImageGridDesktop() {
+  return (
+    <div className={styles.grid_container}>
+      <div className={styles.flex_container_left}>
+        <Image
+          className={styles.food_image}
+          width={380}
+          height={600}
+          alt="eating outside"
+          src="/food4.JPG"
+        />
+      </div>
+      <div className={styles.flex_container_right}>
+        <Image
+          className={styles.food_image}
+          width={600}
+          height={390}
+          alt="table with rose wine"
+          src="/food1.JPG"
+        />
+        <Image
+          className={styles.food_image}
+          id="image"
+          width={420}
+          height={220}
+          alt="table by the sea"
+          src="/food3.JPG"
+        />
+      </div>
+    </div>
+  );
+}
+
+function ImageGridMobile() {
+  return (
+    <div className={styles.grid_container_mobile}>
+      <div className={styles.flex_container_left}>
+        <Image
+          className={styles.food_image}
+          width={117}
+          height={190}
+          alt="eating outside"
+          src="/food4.JPG"
+        />
+      </div>
+      <div className={styles.flex_container_right}>
+        <Image
+          className={styles.food_image}
+          width={190}
+          height={120}
+          alt="table with rose wine"
+          src="/food1.JPG"
+        />
+        <Image
+          className={styles.food_image}
+          width={130}
+          height={63}
+          alt="table by the sea"
+          src="/food3.JPG"
+        />
+      </div>
+    </div>
+  );
+}
+
+function GeneralIntro() {
+  return (
+    <div className={common.text_container}>
+      <p>
+        Το πιο φημισμένο προϊόν του νησιού είναι το συριανό λουκούμι. Η τέχνη
+        της παρασκευής του έφτασε στη Σύρο με τους πρώτους πρόσφυγες από Χίο,
+        ενώ το έτερο συριανό προϊόν των λουκουμοποιών είναι η χαλβαδόπιτα που
+        παρασκευάζεται από θυμαρίσιο συριανό μέλι και φρεσκοψημένο αμύγδαλο. Η
+        Σύρος φημίζεται και για τα τυροκομικά της, όπως το περίφημο τυρί Σαν
+        Μιχάλη που ξεχωρίζει για τη μοναδική πικάντικη γεύση του. Στην οδό Χίου
+        θα βρείτε αρκετά μαγαζιά για να προμηθευτείτε παραδοσιακά προϊόντα του
+        νησιού.
+      </p>
+    </div>
+  );
+}
+
+function GeographicalIntro() {
+  return (
+    <div
+      className={common.text_container}
+      style={{ textAlign: "left", alignItems: "start" }}
+    >
+      <p>
+        Τρεις είναι οι επαρχίες (πρώην δήμοι) που συνθέτουν τα χωριά της Σύρου:
+      </p>
+      <ul>
+        <li>
+          <strong>Ερμούπολη</strong>, που αποτελείται από την πρωτεύουσα και τα
+          γύρω χωριά.
+        </li>
+        <li>
+          <strong>Άνω Σύρος</strong>, με την ομώνυμη ιστορική έδρα του δήμου και
+          τα χωριά της Σύρου που ανήκουν στην Απάνω Μεριά του νησιού, στα
+          βόρεια.
+        </li>
+        <li>
+          <strong>Ποσειδωνία</strong>, με τα χωριά της Σύρου που συγκεντρώνουν
+          τη μεγαλύτερη τουριστική κίνηση στο νησί και βρίσκονται στο νότιο
+          τμήμα.
+        </li>
+      </ul>
+      <div className={styles.image_map}>
+        <Image
+          width={562}
+          height={659}
+          alt="Map"
+          layout="responsive"
+          src="/map.jpg"
+        />
+      </div>
+      <p>
+        Παρακάτω θα βρείτε κάποιες προτάσεις για φαγητό και για ποτό, ανά
+        περιοχή. Κάνοντας κλικ πάνω στα ονόματα θα βρεθείτε στην αντίστοιχη
+        ιστοσελίδα του Trip Advisor.
+      </p>
+    </div>
   );
 }
