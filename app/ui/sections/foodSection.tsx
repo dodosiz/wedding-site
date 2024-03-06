@@ -10,8 +10,6 @@ export function FoodSection() {
       <Header className={styles.food_header} textAlign="center">
         Γευστικές περιηγήσεις
       </Header>
-      <ImageGridDesktop />
-      <ImageGridMobile />
       <GeneralIntro />
       <GeographicalIntro />
       <div
@@ -326,74 +324,17 @@ export function FoodSection() {
   );
 }
 
-function ImageGridDesktop() {
-  return (
-    <div className={styles.grid_container}>
-      <div className={styles.flex_container_left}>
-        <Image
-          className={styles.food_image}
-          width={380}
-          height={600}
-          alt="eating outside"
-          src="/food4.JPG"
-        />
-      </div>
-      <div className={styles.flex_container_right}>
-        <Image
-          className={styles.food_image}
-          width={600}
-          height={390}
-          alt="table with rose wine"
-          src="/food1.JPG"
-        />
-        <Image
-          className={styles.food_image}
-          id="image"
-          width={420}
-          height={220}
-          alt="table by the sea"
-          src="/food3.JPG"
-        />
-      </div>
-    </div>
-  );
-}
-
-function ImageGridMobile() {
-  return (
-    <div className={styles.grid_container_mobile}>
-      <div className={styles.flex_container_left}>
-        <Image
-          className={styles.food_image}
-          width={117}
-          height={190}
-          alt="eating outside"
-          src="/food4.JPG"
-        />
-      </div>
-      <div className={styles.flex_container_right}>
-        <Image
-          className={styles.food_image}
-          width={190}
-          height={120}
-          alt="table with rose wine"
-          src="/food1.JPG"
-        />
-        <Image
-          className={styles.food_image}
-          width={130}
-          height={63}
-          alt="table by the sea"
-          src="/food3.JPG"
-        />
-      </div>
-    </div>
-  );
-}
-
 function GeneralIntro() {
   return (
     <div className={common.text_container}>
+      <Image
+        className={styles.food_image}
+        width={1280}
+        height={1214}
+        layout="responsive"
+        alt="food options in Syros"
+        src="/food.png"
+      />
       <p>
         Το πιο φημισμένο προϊόν του νησιού είναι το συριανό λουκούμι. Η τέχνη
         της παρασκευής του έφτασε στη Σύρο με τους πρώτους πρόσφυγες από Χίο,

@@ -41,9 +41,9 @@ export const ATTRACTION_GROUPS: AttractionGroup[] = [
     items: [
       {
         id: 3,
-        image: "/attractions/kukladikhs.jpg",
-        text: "Πινακοθήκη Κυκλάδων",
-        link: "https://maps.app.goo.gl/UU9d2QfbrbEGyT6r6",
+        image: "/attractions/klostoifant.jpg",
+        text: "Μουσείο Κλωστοϋφαντουργίας",
+        link: "https://maps.app.goo.gl/tPaDZ4tz95wxYnzC7",
       },
       {
         id: 4,
