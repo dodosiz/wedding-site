@@ -9,6 +9,7 @@ import { AccomondationSection } from "./ui/sections/accomondationSection";
 import { GetThereSection } from "./ui/sections/getThereSection";
 import { AttractionsSection } from "./ui/sections/attractionsSection";
 import { ACCOMONDATIONS } from "./data/accomondation";
+import { ATTRACTION_GROUPS } from "./data/attraction";
 
 export default function Home() {
   const [active, setActive] = useState("home");
@@ -40,7 +41,7 @@ export default function Home() {
           <FoodSection />
         </Section>
         <Section id="attractions" setActiveNav={setActive}>
-          <AttractionsSection />
+          <AttractionsSection groups={ATTRACTION_GROUPS} />
         </Section>
         <Section id="getThere" setActiveNav={setActive}>
           <GetThereSection />
