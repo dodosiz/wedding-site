@@ -99,79 +99,17 @@ export function FoodSection() {
         </p>
       </div>
       <div className={common.text_container} style={{textAlign: "left", alignItems: "start"}}>
-        <h2>Ταβέρνες</h2>
-        <ul>
+        <h2><strong>Ταβέρνες</strong></h2>
+        <h3 className={styles.location_header}>Ερμούπολη</h3>
+        <ul className={styles.location_list}>
           <li>
-            ταβερνάκι στην παραλία{" "}
             <a
-              href="https://www.tripadvisor.com.gr/Restaurant_Review-g6212274-d8494672-Reviews-Achladi_Restaurant-Vari_Syros_Cyclades_South_Aegean.html"
+              href="https://www.tripadvisor.com.gr/Restaurant_Review-g616163-d6851874-Reviews-Mazi-Hermoupolis_Syros_Cyclades_South_Aegean.html"
               target="_blank"
             >
-              Αχλάδι
+              Mazi
             </a>{" "}
-            (θαλασσινά και ψαράκια)
-          </li>
-          <li>
-            <a
-              href="https://www.tripadvisor.com.gr/Restaurant_Review-g1925453-d780363-Reviews-Allou_Yialou-Kini_Syros_Cyclades_South_Aegean.html"
-              target="_blank"
-            >
-              Αλλού Γυαλού
-            </a>{" "}
-            (Σερβίρει πρωτότυπα πιάτα σε μια μεγάλη βεράντα πάνω στη θάλασσα)
-          </li>
-          <li>
-            <a
-              href="https://www.tripadvisor.com/Restaurant_Review-g1190346-d10538290-Reviews-Ono_Concept-Poseidonia_Syros_Cyclades_South_Aegean.html"
-              target="_blank"
-            >
-              Ono Concept
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.tripadvisor.com.gr/Restaurant_Review-g1925453-d3566771-Reviews-Dyo_Tzitzikia_Sta_Armyrikia-Kini_Syros_Cyclades_South_Aegean.html"
-              target="_blank"
-            >
-              Δυο Τζιτζίκια στ’ Αρμυρίκια
-            </a>{" "}
-            (παραθαλάσσιο ταβερνάκι με θαλασσινά)
-          </li>
-          <li>
-            <a
-              href="https://www.tripadvisor.com.gr/Restaurant_Review-g616163-d2465522-Reviews-To_Plakostroto-Hermoupolis_Syros_Cyclades_South_Aegean.html"
-              target="_blank"
-            >
-              Πλακόστρωτο
-            </a>{" "}
-            (στην Απάνω Μεριά που έχει θέα συγκλονιστική και έξοχα μαγειρευτά)
-          </li>
-          <li>
-            ξενοδοχείο{" "}
-            <a
-              href="https://www.tripadvisor.com/Hotel_Review-g15278394-d21131122-Reviews-Aristide_Hotel-Ermoupoli_Syros_Cyclades_South_Aegean.html"
-              target="_blank"
-            >
-              Aristide
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.tripadvisor.com.gr/Restaurant_Review-g189435-d4702189-Reviews-Mitsos_Taverna_Syros-Syros_Cyclades_South_Aegean.html"
-              target="_blank"
-            >
-              ο Μήτσος
-            </a>
-            (ξακουστός αν είσαι λάτρης του κρέατος)
-          </li>
-          <li>
-            <a
-              href="https://www.tripadvisor.com.gr/Restaurant_Review-g1184009-d2194506-Reviews-Iliovasilema-Galissas_Syros_Cyclades_South_Aegean.html"
-              target="_blank"
-            >
-              ηλιοβασίλεμα
-            </a>{" "}
-            Σύρος
+            (Η πιο ωραία αυλή του νησιού)
           </li>
           <li>
             <a
@@ -184,40 +122,130 @@ export function FoodSection() {
           </li>
           <li>
             <a
+              href="https://www.tripadvisor.com.gr/Restaurant_Review-g616163-d4182504-Reviews-Sta_Vaporia-Hermoupolis_Syros_Cyclades_South_Aegean.html"
+              target="_blank"
+            >
+              Στα Βαπόρια
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.tripadvisor.com.gr/Restaurant_Review-g616163-d3167480-Reviews-Amvix-Hermoupolis_Syros_Cyclades_South_Aegean.html"
+              target="_blank"
+            >
+              Amvix
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.tripadvisor.com.gr/Restaurant_Review-g616163-d10352367-Reviews-To_Tsipouradiko_Tis_Mirsinis-Hermoupolis_Syros_Cyclades_South_Aegean.html"
+              target="_blank"
+            >
+              Το Τσιπουράδικο της Μυρσίνης
+            </a>
+          </li>
+        </ul>
+        <h3 className={styles.location_header}>Κίνι</h3>
+        <ul className={styles.location_list}>
+          <li>
+            <a
+              href="https://www.tripadvisor.com.gr/Restaurant_Review-g1925453-d780363-Reviews-Allou_Yialou-Kini_Syros_Cyclades_South_Aegean.html"
+              target="_blank"
+            >
+              Αλλού Γυαλού
+            </a>{" "}
+            (Σερβίρει πρωτότυπα πιάτα σε μια μεγάλη βεράντα πάνω στη θάλασσα)
+          </li>
+          <li>
+            <a
+              href="https://www.tripadvisor.com.gr/Restaurant_Review-g1925453-d3566771-Reviews-Dyo_Tzitzikia_Sta_Armyrikia-Kini_Syros_Cyclades_South_Aegean.html"
+              target="_blank"
+            >
+              Δυο Τζιτζίκια στ’ Αρμυρίκια
+            </a>{" "}
+            (παραθαλάσσιο ταβερνάκι με θαλασσινά)
+          </li>
+        </ul>
+        <h3 className={styles.location_header}>Γαλησσάς</h3>
+        <ul className={styles.location_list}>
+          <li>
+            <a
+              href="https://www.tripadvisor.com.gr/Restaurant_Review-g1184009-d2194506-Reviews-Iliovasilema-Galissas_Syros_Cyclades_South_Aegean.html"
+              target="_blank"
+            >
+              ηλιοβασίλεμα
+            </a>{" "}
+            Σύρος
+          </li>
+        </ul>
+        <h3 className={styles.location_header}>Ποσειδωνία</h3>
+        <ul className={styles.location_list}>
+         <li>
+            <a
+              href="https://www.tripadvisor.com/Restaurant_Review-g1190346-d10538290-Reviews-Ono_Concept-Poseidonia_Syros_Cyclades_South_Aegean.html"
+              target="_blank"
+            >
+              Ono Concept
+            </a>
+          </li>
+        </ul>
+        <h3 className={styles.location_header}>Άη Μιχάλης</h3>
+        <ul className={styles.location_list}>
+          <li>
+            <a
+              href="https://www.tripadvisor.com.gr/Restaurant_Review-g616163-d2465522-Reviews-To_Plakostroto-Hermoupolis_Syros_Cyclades_South_Aegean.html"
+              target="_blank"
+            >
+              Πλακόστρωτο
+            </a>{" "}
+            (στην Απάνω Μεριά που έχει θέα συγκλονιστική και έξοχα μαγειρευτά)
+          </li>
+        </ul>
+        <h3 className={styles.location_header}>Αληθινή</h3>
+        <ul className={styles.location_list}>
+          <li>
+            <a
+              href="https://www.tripadvisor.com.gr/Restaurant_Review-g189435-d4702189-Reviews-Mitsos_Taverna_Syros-Syros_Cyclades_South_Aegean.html"
+              target="_blank"
+            >
+              ο Μήτσος
+            </a>
+            (ξακουστός αν είσαι λάτρης του κρέατος)
+          </li>
+        </ul>
+        <h3 className={styles.location_header}>Αχλάδι</h3>
+        <ul className={styles.location_list}>
+          <li>
+            ταβερνάκι στην παραλία{" "}
+            <a
+              href="https://www.tripadvisor.com.gr/Restaurant_Review-g6212274-d8494672-Reviews-Achladi_Restaurant-Vari_Syros_Cyclades_South_Aegean.html"
+              target="_blank"
+            >
+              Ταβέρνα Αχλάδι
+            </a>{" "}
+            (θαλασσινά και ψαράκια)
+          </li>
+        </ul>
+        <h2><strong>Brunch / καφέ</strong></h2>
+        <h3 className={styles.location_header}>Ερμούπολη</h3>
+        <ul className={styles.location_list}>
+          <li>
+            ξενοδοχείο{" "}
+            <a
+              href="https://www.tripadvisor.com/Hotel_Review-g15278394-d21131122-Reviews-Aristide_Hotel-Ermoupoli_Syros_Cyclades_South_Aegean.html"
+              target="_blank"
+            >
+              Aristide
+            </a>
+          </li>
+          <li>
+            <a
               href="https://www.tripadvisor.com.gr/Restaurant_Review-g616163-d6851874-Reviews-Mazi-Hermoupolis_Syros_Cyclades_South_Aegean.html"
               target="_blank"
             >
               Mazi
             </a>{" "}
             (Η πιο ωραία αυλή του νησιού)
-          </li>
-          <li>
-            <a
-              href="https://www.tripadvisor.com.gr/Restaurant_Review-g616163-d4507531-Reviews-Peri_Tinos-Hermoupolis_Syros_Cyclades_South_Aegean.html"
-              target="_blank"
-            >
-              Το Περί Τίνος
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.tripadvisor.com.gr/Restaurant_Review-g3581255-d8294485-Reviews-Apanohoritissa-Ano_Siros_Syros_Cyclades_South_Aegean.html"
-              target="_blank"
-            >
-              Η Απανοχωρίτισσα
-            </a>
-          </li>
-        </ul>
-        <h2>Brunch / καφέ</h2>
-        <ul>
-          <li>
-            <a
-              href="https://www.tripadvisor.fr/Restaurant_Review-g1190346-d8531435-Reviews-Perroquet_Tranquille-Poseidonia_Syros_Cyclades_South_Aegean.html"
-              target="_blank"
-            >
-              Le Perroquet Tranquille
-            </a>{" "}
-            (φτιάχνουν τα ωραιότερα κροκ μαντάμ και κροκ μεσιέ)
           </li>
           <li>
             <a
@@ -231,23 +259,27 @@ export function FoodSection() {
           </li>
           <li>
             <a
-              href="https://www.tripadvisor.com.gr/Restaurant_Review-g616163-d4701521-Reviews-Kouchico-Hermoupolis_Syros_Cyclades_South_Aegean.html"
+              href="https://www.tripadvisor.com.gr/Restaurant_Review-g15278394-d24110872-Reviews-Epta_Syros_Island-Ermoupoli_Syros_Cyclades_South_Aegean.html"
               target="_blank"
             >
-              Kouchico
-            </a>{" "}
-            (το cocktail-bar που ξέρει κι από brunch Jar: το πιο boho brunch
-            στη Σύρο)
+              Epta
+            </a>
           </li>
+        </ul>
+        <h3 className={styles.location_header}>Ποσειδωνία</h3>
+        <ul className={styles.location_list}>
           <li>
             <a
-              href="https://www.tripadvisor.com.gr/Restaurant_Review-g616163-d17404805-Reviews-Plastico-Hermoupolis_Syros_Cyclades_South_Aegean.html"
+              href="https://www.tripadvisor.fr/Restaurant_Review-g1190346-d8531435-Reviews-Perroquet_Tranquille-Poseidonia_Syros_Cyclades_South_Aegean.html"
               target="_blank"
             >
-              Plastico
+              Le Perroquet Tranquille
             </a>{" "}
-            (το κορυφαίο brunch στη Σύρο ξέρει (και) από τέχνη)
+            (φτιάχνουν τα ωραιότερα κροκ μαντάμ και κροκ μεσιέ)
           </li>
+        </ul>
+        <h3 className={styles.location_header}>Άνω Σύρος</h3>
+        <ul className={styles.location_list}>
           <li>
             <a
               href="https://www.tripadvisor.com.gr/Restaurant_Review-g3581255-d12437862-Reviews-Syrianon_Kafepoteio-Ano_Siros_Syros_Cyclades_South_Aegean.html"
@@ -257,17 +289,13 @@ export function FoodSection() {
             </a>
           </li>
         </ul>
-        <h2>Ποτό</h2>
-        <ul>
-          <li>
-            <a
-              href="https://www.tripadvisor.com/Restaurant_Review-g3581255-d24928896-Reviews-Theosis-Ano_Siros_Syros_Cyclades_South_Aegean.html"
-              target="_blank"
-            >
-              Theosis
-            </a>{" "}
-            (Τα πιο έμπειρα κοκτέιλ στη Σύρο)
-          </li>
+        <h3 className={styles.location_header}>Μαρίνα Φοίνικα</h3>
+        <ul className={styles.location_list}>
+          <li>Bao Bap</li>
+        </ul>
+        <h2><strong>Ποτό</strong></h2>
+        <h3 className={styles.location_header}>Ερμούπολη</h3>
+        <ul className={styles.location_list}>
           <li>
             <a
               href="https://www.tripadvisor.com.gr/Restaurant_Review-g189435-d17734098-Reviews-Ciel-Syros_Cyclades_South_Aegean.html"
@@ -286,10 +314,10 @@ export function FoodSection() {
           </li>
           <li>
             <a
-              href="https://www.tripadvisor.com.gr/Attraction_Review-g616163-d12854743-Reviews-Baba_Bar-Hermoupolis_Syros_Cyclades_South_Aegean.html"
+              href="https://www.tripadvisor.com.gr/Restaurant_Review-g15278394-d25956517-Reviews-Quattro_Syros-Ermoupoli_Syros_Cyclades_South_Aegean.html"
               target="_blank"
             >
-              Baba bar
+              Quattro
             </a>
           </li>
           <li>
@@ -309,8 +337,21 @@ export function FoodSection() {
             </a>
           </li>
         </ul>
-        <h2>Γλυκό</h2>
-        <ul>
+        <h3 className={styles.location_header}>Άνω Σύρος</h3>
+        <ul className={styles.location_list}>
+          <li>
+            <a
+              href="https://www.tripadvisor.com/Restaurant_Review-g3581255-d24928896-Reviews-Theosis-Ano_Siros_Syros_Cyclades_South_Aegean.html"
+              target="_blank"
+            >
+              Theosis
+            </a>{" "}
+            (Τα πιο έμπειρα κοκτέιλ στη Σύρο)
+          </li>
+        </ul>
+        <h2><strong>Γλυκό</strong></h2>
+        <h3 className={styles.location_header}>Ερμούπολη</h3>
+        <ul className={styles.location_list}>
           <li>
             <a
               href="https://www.tripadvisor.com.gr/Restaurant_Review-g616163-d10814495-Reviews-M_I_Athymaritis-Hermoupolis_Syros_Cyclades_South_Aegean.html"
