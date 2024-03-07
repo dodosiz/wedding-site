@@ -1,0 +1,10 @@
+.image_map {
+  margin: 0 auto;
+  width: 50%;
+}
+
+@media only screen and (max-width: 480px) {
+  .image_map {
+    width: 100%;
+  }
+}

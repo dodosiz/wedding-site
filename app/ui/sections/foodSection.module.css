@@ -9,21 +9,12 @@
   display: none;
 }
 
-.location_header {
-  font-style: italic;
-  margin-bottom: 0;
-}
-
 .location_list {
   margin-top: 0;
 }
 
 .food_header {
   margin-top: 10%;
-}
-
-.food_image {
-  border-radius: 10px;
 }
 
 .side_gif {
@@ -33,11 +24,6 @@
   max-height: 350px;
 }
 
-.image_map {
-  margin: 0 auto;
-  width: 50%;
-}
-
 @media only screen and (max-width: 480px) {
   .grid_container_mobile {
     display: grid;
@@ -45,12 +31,8 @@
     gap: 10px;
     padding: 20px 10%;
   }
-  
+
   .grid_container {
     display: none;
-  }
-
-  .image_map {
-    width: 100%;
   }
 }
