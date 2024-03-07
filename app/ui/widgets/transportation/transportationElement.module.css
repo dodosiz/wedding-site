@@ -1,0 +1,20 @@
+.transition_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 480px) {
+  .transition_title {
+    justify-content: left;
+  }
+}
