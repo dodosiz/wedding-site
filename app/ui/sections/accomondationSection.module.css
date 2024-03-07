@@ -26,21 +26,7 @@
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
-.image_desktop {
-  display: block;
-}
-
-.image_mobile {
-  display: none;
-}
-
 @media only screen and (max-width: 480px) {
-  .image_desktop {
-    display: none;
-  }
-  .image_mobile {
-    display: block;
-  }
   .header_desktop {
     display: none;
   }
