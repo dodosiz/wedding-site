@@ -1,0 +1,17 @@
+.timeline_container {
+  padding: 5% 15%;
+}
+
+.timeline_container_mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+  .timeline_container_mobile {
+    padding: 5% 15%;
+    display: block;
+  }
+  .timeline_container {
+    display: none;
+  }
+}

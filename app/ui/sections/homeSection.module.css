@@ -30,25 +30,6 @@
   gap: 10px;
 }
 
-.suspects_grid_item {
-  text-align: center;
-}
-
-.suspects_grid_box {
-  width: 250px;
-  height: 500px;
-  border: 1px solid black;
-  background-color: gray;
-}
-
-.suspect_img {
-  transition: transform 0.5s ease;
-}
-
-.suspect_img:hover {
-  transform: scale(1.05, 1.05);
-}
-
 .suspects_logo {
   width: 300px;
   padding: 20px 0;
@@ -82,35 +63,6 @@
 .arrow.right {
   float: right;
   color: white;
-}
-
-.timeline_title {
-  margin-top: 5%;
-  margin-bottom: 0;
-  font-size: 2em;
-}
-
-.timeline_silenced {
-  font-style: italic;
-  margin-bottom: 0;
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.timeline_container {
-  padding: 5% 15%;
-}
-
-.timeline_container_mobile {
-  display: none;
-}
-
-.timeline_date {
-  margin-bottom: 20px;
-  font-size: 1.5em;
-}
-
-.timeline_place {
-  margin-bottom: 190px;
 }
 
 .home_background0 {
@@ -147,43 +99,6 @@
   background-size: cover;
   height: 100%;
   transition: all 1s ease-out;
-}
-
-.save_the_date_grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-}
-
-.save_the_date_letter_2 {
-  display: flex;
-  align-items: start;
-  position: relative;
-}
-
-.save_the_date_letter_2_mobile {
-  display: none;
-}
-
-.save_the_date_letter_8 {
-  display: flex;
-  align-items: end;
-  position: relative;
-}
-
-.save_the_date_letter_8_mobile {
-  display: none;
-}
-
-.save_the_date_text {
-  text-align: center;
-  display: flex;
-  justify-content: end;
-  flex-direction: column;
-  height: 700px;
-}
-
-.save_the_date_text_mobile {
-  display: none;
 }
 
 .suspects_mobile {
@@ -232,49 +147,5 @@
   }
   .home_suspects_container {
     padding-top: 20px;
-  }
-  .timeline_container_mobile {
-    padding: 5% 15%;
-    display: block;
-  }
-  .timeline_container {
-    display: none;
-  }
-  .timeline_date {
-    margin-bottom: 20px;
-  }
-  .timeline_place {
-    margin-bottom: 30px;
-  }
-  .save_the_date_text {
-    display: none;
-  }
-  .save_the_date_text_mobile {
-    text-align: center;
-    display: flex;
-    justify-content: end;
-    flex-direction: column;
-    font-size: 0.5em;
-    height: 250px;
-  }
-  .save_the_date_grid {
-    display: grid;
-    grid-template-columns: 1fr 3fr 2fr 3fr 1fr;
-  }
-  .save_the_date_letter_2_mobile {
-    display: flex;
-    align-items: start;
-    position: relative;
-  }
-  .save_the_date_letter_2 {
-    display: none;
-  }
-  .save_the_date_letter_8_mobile {
-    display: flex;
-    align-items: end;
-    position: relative;
-  }
-  .save_the_date_letter_8 {
-    display: none;
   }
 }

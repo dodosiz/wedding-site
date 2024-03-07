@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import { Suspect, SuspectMobile } from "@/app/data/suspects";
+import { SuspectWidget } from "../widgets/home/suspectWidget";
+import { SaveTheDate } from "../widgets/home/saveTheDate";
+import { Timeline } from "../widgets/home/timeline";
 
 interface HomeSectionProps {
   suspects: Suspect[];
@@ -147,34 +150,6 @@ export function HomeSection({ suspects, suspectsMobile }: HomeSectionProps) {
   );
 }
 
-interface SuspectWidgetProps {
-  suspect: Suspect;
-}
-
-function SuspectWidget({ suspect }: SuspectWidgetProps) {
-  return (
-    <div className={styles.suspects_grid_item}>
-      <Header textAlign="center" level={3}>
-        {suspect.title}
-        <br />
-        {suspect.subtitle}
-      </Header>
-      {suspect.image && suspect.alt ? (
-        <Image
-          className={styles.suspect_img}
-          width={250}
-          height={500}
-          alt={suspect.alt}
-          src={suspect.image}
-        />
-      ) : (
-        <div className={styles.suspects_grid_box}></div>
-      )}
-      <p>{suspect.moto}</p>
-    </div>
-  );
-}
-
 function getBackgroundClass(index: number) {
   switch (index) {
     case 0:
@@ -188,128 +163,4 @@ function getBackgroundClass(index: number) {
     default:
       return styles.home_background0;
   }
-}
-
-interface SaveTheDateProps {
-  topDesktop: number;
-  topMobile: number;
-}
-
-function SaveTheDate({ topDesktop, topMobile }: SaveTheDateProps) {
-  return (
-    <div className={styles.save_the_date_grid}>
-      <div></div>
-      <div
-        id="2"
-        className={styles.save_the_date_letter_2}
-        style={{ right: topDesktop }}
-      >
-        <Image
-          src="/save_the_date/letter2.png"
-          alt="letter 2"
-          width={307}
-          height={441}
-        />
-      </div>
-      <div
-        id="2_mobile"
-        className={styles.save_the_date_letter_2_mobile}
-        style={{ right: topMobile }}
-      >
-        <Image
-          src="/save_the_date/letter2.png"
-          alt="letter 2"
-          width={112}
-          height={161}
-        />
-      </div>
-      <div
-        className={styles.save_the_date_text}
-        style={{ opacity: `${100 - topDesktop}%` }}
-      >
-        <p className={styles.timeline_date}>
-          Κυριακή
-          <br />
-          28 Ιουλίου 2024
-        </p>
-        <p className={styles.timeline_place}>Ερμούπολη, Σύρος</p>
-        <h2 className={styles.timeline_title}>Weekend Timeline</h2>
-        <p className={styles.timeline_silenced}>27-28 Ιουλίου</p>
-      </div>
-      <div
-        className={styles.save_the_date_text_mobile}
-        style={{ opacity: `${100 - topMobile}%` }}
-      >
-        <p className={styles.timeline_date}>
-          Κυριακή
-          <br />
-          28 Ιουλίου 2024
-        </p>
-        <p className={styles.timeline_place}>Ερμούπολη, Σύρος</p>
-        <h2 className={styles.timeline_title}>Weekend Timeline</h2>
-        <p className={styles.timeline_silenced}>27-28 Ιουλίου</p>
-      </div>
-      <div
-        className={styles.save_the_date_letter_8}
-        style={{ left: topDesktop }}
-      >
-        <Image
-          src="/save_the_date/letter8.png"
-          alt="letter 8"
-          width={307}
-          height={441}
-        />
-      </div>
-      <div
-        className={styles.save_the_date_letter_8_mobile}
-        style={{ left: topMobile }}
-      >
-        <Image
-          src="/save_the_date/letter8.png"
-          alt="letter 8"
-          width={112}
-          height={161}
-        />
-      </div>
-      <div></div>
-    </div>
-  );
-}
-
-interface TimelineProps {
-  topTimelineDesktop: number;
-  topTimelineMobile: number;
-}
-
-function Timeline({ topTimelineDesktop, topTimelineMobile }: TimelineProps) {
-  return (
-    <>
-      <div
-        className={styles.timeline_container}
-        id="timeline"
-        style={{ opacity: `${100 - topTimelineDesktop}%` }}
-      >
-        <Image
-          src="/timeline.jpg"
-          alt="timeline"
-          width={4961}
-          height={2607}
-          layout="responsive"
-        />
-      </div>
-      <div
-        className={styles.timeline_container_mobile}
-        id="timeline_mobile"
-        style={{ opacity: `${100 - topTimelineMobile}%` }}
-      >
-        <Image
-          src="/timeline_mobile.jpg"
-          alt="timeline"
-          width={1242}
-          height={2208}
-          layout="responsive"
-        />
-      </div>
-    </>
-  );
 }
