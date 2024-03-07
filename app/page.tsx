@@ -11,6 +11,7 @@ import { AttractionsSection } from "./ui/sections/attractionsSection";
 import { ACCOMONDATIONS } from "./data/accomondation";
 import { ATTRACTION_GROUPS } from "./data/attraction";
 import { FOOD_GROUPS } from "./data/food";
+import { SUSPECTS, SUSPECTS_MOBILE } from "./data/suspects";
 
 export default function Home() {
   const [active, setActive] = useState("home");
@@ -30,7 +31,7 @@ export default function Home() {
       />
       <main>
         <Section id="home" setActiveNav={setActive}>
-          <HomeSection />
+          <HomeSection suspects={SUSPECTS} suspectsMobile={SUSPECTS_MOBILE} />
         </Section>
         <Section id="location" setActiveNav={setActive}>
           <LocationSection />
