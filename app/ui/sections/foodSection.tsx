@@ -1,6 +1,5 @@
 "use client";
 import styles from "./foodSection.module.css";
-import common from "./common.module.css";
 import { Header } from "../header";
 import { RestaurantGroup } from "@/app/data/food";
 import { RestaurantGroupWidget } from "../widgets/food/restaurantGroupWidget";
@@ -21,7 +20,7 @@ export function FoodSection({ groups }: FoodSectionProps) {
       <GeneralIntro />
       <GeographicalIntro />
       <div
-        className={common.text_container}
+        className="text_container"
         style={{ textAlign: "left", alignItems: "start" }}
       >
         {groups.map((group, index) => (

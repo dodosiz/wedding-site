@@ -1,10 +1,9 @@
 import Image from "next/image";
-import common from "../../sections/common.module.css";
 import styles from "./generalIntro.module.css";
 
 export function GeneralIntro() {
   return (
-    <div className={common.text_container}>
+    <div className="text_container">
       <Image
         className={styles.food_image}
         width={1280}

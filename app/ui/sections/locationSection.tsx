@@ -1,6 +1,5 @@
 import Image from "next/image";
 import styles from "./locationSection.module.css";
-import common from "./common.module.css";
 import { Header } from "../header";
 
 export function LocationSection() {
@@ -9,20 +8,25 @@ export function LocationSection() {
       <div className={styles.location_image_container}>
         <div className={styles.ermoupolis_background}></div>
         <Image
-            layout="responsive"
-            src="/church1.JPG"
-            className={styles.church_mobile}
-            width={1449}
-            height={968}
-            alt="church mobile"
-          />
+          layout="responsive"
+          src="/church1.JPG"
+          className={styles.church_mobile}
+          width={1449}
+          height={968}
+          alt="church mobile"
+        />
       </div>
-      <div className={common.text_container}>
+      <div className="text_container">
         <Header textAlign="center">{"Η Τοποθεσία"}</Header>
         <p>
-          Το μυστήριο θα τελεστεί στην <strong>εκκλησία του Αγίου Νικολάου</strong> στην Ερμούπολη Σύρου. Η ώρα 18:00 στις 28 Ιουλίου 2024.
+          Το μυστήριο θα τελεστεί στην{" "}
+          <strong>εκκλησία του Αγίου Νικολάου</strong> στην Ερμούπολη Σύρου. Η
+          ώρα 18:00 στις 28 Ιουλίου 2024.
         </p>
-        <p>Στη συνέχεια θα κατευθυνθούμε στην <strong>βίλλα 3 lagoons</strong>, όπου και θα πραγματοποιηθεί η γαμήλια δεξίωση.</p>
+        <p>
+          Στη συνέχεια θα κατευθυνθούμε στην <strong>βίλλα 3 lagoons</strong>,
+          όπου και θα πραγματοποιηθεί η γαμήλια δεξίωση.
+        </p>
         <div className={styles.location_pin_container}>
           <Image
             layout="responsive"
@@ -47,7 +51,9 @@ export function LocationSection() {
                 href="https://maps.app.goo.gl/GKHcszwbC9EM9fHp9"
                 target="_blank"
                 className={styles.pin_link}
-              >Εκκλησία του Αγίου Νικολάου</a>
+              >
+                Εκκλησία του Αγίου Νικολάου
+              </a>
             </div>
             <div className={styles.pins_grid}>
               <Image src="/pin.gif" width={100} height={100} alt="pin" />
@@ -55,7 +61,9 @@ export function LocationSection() {
                 href="https://maps.app.goo.gl/VzYB1JTirb81WrZK9"
                 target="_blank"
                 className={styles.pin_link}
-              >Βίλλα 3 lagoons</a>
+              >
+                Βίλλα 3 lagoons
+              </a>
             </div>
           </div>
         </div>

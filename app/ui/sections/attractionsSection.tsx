@@ -1,5 +1,4 @@
 import { Header } from "../header";
-import common from "./common.module.css";
 import styles from "./attractionsSection.module.css";
 import { useState } from "react";
 import { AttractionGroup } from "@/app/data/attraction";
@@ -12,7 +11,7 @@ interface AttractionSectionProps {
 export function AttractionsSection({ groups }: AttractionSectionProps) {
   const [hovered, setHovered] = useState<number | undefined>(undefined);
   return (
-    <div className={`${styles.attractions_section} ${common.text_container}`}>
+    <div className={`${styles.attractions_section} text_container`}>
       <Header textAlign="center">Αξιοθέατα</Header>
       <div className={styles.attractions_grid}>
         {groups.map((group, index) => (

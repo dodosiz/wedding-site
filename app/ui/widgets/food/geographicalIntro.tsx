@@ -1,11 +1,10 @@
 import Image from "next/image";
-import common from "../../sections/common.module.css";
 import styles from "./geographicalIntro.module.css";
 
 export function GeographicalIntro() {
   return (
     <div
-      className={common.text_container}
+      className="text_container"
       style={{ textAlign: "left", alignItems: "start" }}
     >
       <p>

@@ -1,9 +1,8 @@
 import { Header } from "../../header";
-import common from "../../sections/common.module.css";
 
 export function Intro() {
   return (
-    <div className={common.text_container}>
+    <div className="text_container">
       <Header textAlign="center">Μετάβαση</Header>
       <p>
         Η πλεονεκτική θέση της Σύρου στην καρδιά των Κυκλάδων και η κοντινή της

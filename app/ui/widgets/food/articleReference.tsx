@@ -1,8 +1,6 @@
-import common from "../../sections/common.module.css";
-
 export function ArticleReference() {
   return (
-    <div className={common.text_container}>
+    <div className="text_container">
       <p>
         Αξίζει να διαβάσετε και{" "}
         <a
