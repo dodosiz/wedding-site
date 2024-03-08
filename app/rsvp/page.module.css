@@ -1,0 +1,16 @@
+.paragraph {
+  width: 40vw;
+  margin: 0;
+}
+
+.return {
+  font-weight: 300;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  width: 1rem;
+}

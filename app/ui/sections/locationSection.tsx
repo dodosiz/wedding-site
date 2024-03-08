@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./locationSection.module.css";
 import { Header } from "../header";
+import Link from "next/link";
 
 export function LocationSection() {
   return (
@@ -27,6 +28,9 @@ export function LocationSection() {
           Στη συνέχεια θα κατευθυνθούμε στην <strong>βίλλα 3 lagoons</strong>,
           όπου και θα πραγματοποιηθεί η γαμήλια δεξίωση.
         </p>
+        <Link className={styles.rsvp_button} href="/rsvp">
+          Δήλωσε Συμμετοχή
+        </Link>
         <div className={styles.location_pin_container}>
           <Image
             layout="responsive"

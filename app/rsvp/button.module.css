@@ -1,0 +1,21 @@
+.input_group {
+  margin: 10px 0;
+  text-align: right;
+}
+
+.button {
+  appearance: none;
+  border: 0.2em solid black;
+  background: hsl(0 0 0/0);
+  padding: 0.85em 1.5em;
+  border-radius: 2em;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  background: black;
+  color: white;
+}

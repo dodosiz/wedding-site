@@ -40,10 +40,6 @@
   font-size: 1.5em;
 }
 
-.timeline_place {
-  margin-bottom: 190px;
-}
-
 .timeline_title {
   margin-top: 5%;
   margin-bottom: 0;
@@ -54,6 +50,25 @@
   font-style: italic;
   margin-bottom: 0;
   color: rgba(255, 255, 255, 0.5);
+}
+
+.rsvp_button {
+  appearance: none;
+  border: 0.2em solid white;
+  padding: 0.85em 1.5em;
+  transition: 1s;
+  cursor: pointer;
+  color: white;
+  margin-bottom: 190px;
+  text-decoration: none;
+}
+
+.rsvp_button:hover,
+.rsvp_button:focus,
+.rsvp_button:active {
+  background: white;
+  color: black;
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 480px) {
@@ -91,7 +106,7 @@
   .timeline_date {
     margin-bottom: 20px;
   }
-  .timeline_place {
+  .rsvp_button {
     margin-bottom: 30px;
   }
 }

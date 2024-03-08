@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./saveTheDate.module.css";
+import Link from "next/link";
 
 interface SaveTheDateProps {
   topDesktop: number;
@@ -44,6 +45,9 @@ export function SaveTheDate({ topDesktop, topMobile }: SaveTheDateProps) {
           28 Ιουλίου 2024
         </p>
         <p className={styles.timeline_place}>Ερμούπολη, Σύρος</p>
+        <Link className={styles.rsvp_button} href="/rsvp">
+          RSVP
+        </Link>
         <h2 className={styles.timeline_title}>Weekend Timeline</h2>
         <p className={styles.timeline_silenced}>27-28 Ιουλίου</p>
       </div>
@@ -57,6 +61,9 @@ export function SaveTheDate({ topDesktop, topMobile }: SaveTheDateProps) {
           28 Ιουλίου 2024
         </p>
         <p className={styles.timeline_place}>Ερμούπολη, Σύρος</p>
+        <Link className={styles.rsvp_button} href="/rsvp">
+          RSVP
+        </Link>
         <h2 className={styles.timeline_title}>Weekend Timeline</h2>
         <p className={styles.timeline_silenced}>27-28 Ιουλίου</p>
       </div>
