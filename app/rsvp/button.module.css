@@ -6,7 +6,7 @@
 .button {
   appearance: none;
   border: 0.2em solid black;
-  background: hsl(0 0 0/0);
+  background: black;
   padding: 0.85em 1.5em;
   border-radius: 2em;
   transition: 1s;
