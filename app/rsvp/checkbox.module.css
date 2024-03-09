@@ -35,3 +35,10 @@
 .checkbox:checked::before {
   transform: scale(1);
 }
+
+@media only screen and (max-width: 480px) {
+  .input_group {
+    align-items: start;
+    justify-content: start;
+  }
+}

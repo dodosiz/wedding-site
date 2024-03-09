@@ -11,7 +11,7 @@ export function Radio({ values, name, required }: RadioProps) {
     <div className={styles.input_group}>
       {values.map((v) => {
         return (
-          <>
+          <div key={`input-${v}`} className={styles.input_wrapper}>
             <input
               required={required}
               className={styles.radio_input}
@@ -21,7 +21,7 @@ export function Radio({ values, name, required }: RadioProps) {
               value={v.value}
             />
             <label htmlFor={v.value}>{v.label}</label>
-          </>
+          </div>
         );
       })}
     </div>
