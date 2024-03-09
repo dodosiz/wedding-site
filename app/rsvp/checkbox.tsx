@@ -12,6 +12,7 @@ export function Checkbox({ name, label }: InputProps) {
         id={name}
         name={name}
         type="checkbox"
+        value="on"
         className={styles.checkbox}
       />
       <label htmlFor={name}>{label}</label>

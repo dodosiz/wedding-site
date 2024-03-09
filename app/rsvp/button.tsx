@@ -11,7 +11,7 @@ export function Button({ name, label }: InputProps) {
       <input
         id={name}
         name={name}
-        type="button"
+        type="submit"
         value={label}
         className={styles.button}
       />
