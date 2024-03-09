@@ -22,6 +22,7 @@ export function RsvpForm() {
           },
         ]}
         name="will_attend"
+        required
       />
       <Button name="send" label="Αποστολή" />
     </form>
