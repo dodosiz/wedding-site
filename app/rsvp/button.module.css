@@ -11,6 +11,7 @@
   border-radius: 2em;
   transition: 1s;
   cursor: pointer;
+  color: black;
 }
 
 .button:hover,

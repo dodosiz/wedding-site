@@ -18,10 +18,10 @@ export function Timeline({
         style={{ opacity: `${100 - topTimelineDesktop}%` }}
       >
         <Image
-          src="/timeline.jpg"
+          src="/timeline.png"
           alt="timeline"
-          width={4961}
-          height={2607}
+          width={1280}
+          height={535}
           layout="responsive"
         />
       </div>
@@ -31,10 +31,10 @@ export function Timeline({
         style={{ opacity: `${100 - topTimelineMobile}%` }}
       >
         <Image
-          src="/timeline_mobile.jpg"
+          src="/timeline_mobile.png"
           alt="timeline"
-          width={1242}
-          height={2208}
+          width={720}
+          height={1389}
           layout="responsive"
         />
       </div>

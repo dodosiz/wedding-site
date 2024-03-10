@@ -59,7 +59,7 @@
   transition: 1s;
   cursor: pointer;
   color: white;
-  margin-bottom: 190px;
+  margin: 0 5vw 190px 5vw;
   text-decoration: none;
 }
 
@@ -107,6 +107,7 @@
     margin-bottom: 20px;
   }
   .rsvp_button {
+    padding: 0.45em 1em;
     margin-bottom: 30px;
   }
 }
