@@ -9,7 +9,7 @@ export function LocationWidget({ location }: LocationProps) {
   return (
     <>
       <h3 className={styles.location_header}>{location.name}</h3>
-      <ul>
+      <ul style={{marginTop: 0, marginBottom: 5}}>
         {location.restaurants.map((restaurant, index) => {
           return (
             <li key={`restaurant-${index}`}>
