@@ -17,6 +17,7 @@ export function Timeline({
         id="timeline"
         style={{ opacity: `${100 - topTimelineDesktop}%` }}
       >
+        <h2 className={styles.timeline_title}>Timeline</h2>
         <Image
           src="/timeline.png"
           alt="timeline"
@@ -30,6 +31,7 @@ export function Timeline({
         id="timeline_mobile"
         style={{ opacity: `${100 - topTimelineMobile}%` }}
       >
+        <h2 className={styles.timeline_title}>Timeline</h2>
         <Image
           src="/timeline_mobile.png"
           alt="timeline"

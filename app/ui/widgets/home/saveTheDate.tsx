@@ -48,7 +48,6 @@ export function SaveTheDate({ topDesktop, topMobile }: SaveTheDateProps) {
         <Link className={styles.rsvp_button} href="/rsvp">
           RSVP
         </Link>
-        <h2 className={styles.timeline_title}>Timeline</h2>
       </div>
       <div
         className={styles.save_the_date_text_mobile}
@@ -63,7 +62,6 @@ export function SaveTheDate({ topDesktop, topMobile }: SaveTheDateProps) {
         <Link className={styles.rsvp_button} href="/rsvp">
           RSVP
         </Link>
-        <h2 className={styles.timeline_title}>Timeline</h2>
       </div>
       <div
         className={styles.save_the_date_letter_8}

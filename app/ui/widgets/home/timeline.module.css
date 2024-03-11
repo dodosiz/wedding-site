@@ -6,9 +6,16 @@
   display: none;
 }
 
+.timeline_title {
+  margin-top: 5%;
+  margin-bottom: 10%;
+  font-size: 2em;
+  text-align: center;
+}
+
 @media only screen and (max-width: 480px) {
   .timeline_container_mobile {
-    padding: 5% 15%;
+    padding: 30% 15%;
     display: block;
   }
   .timeline_container {
