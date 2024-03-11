@@ -62,7 +62,7 @@ export const SUSPECTS_MOBILE: SuspectMobile[] = [
     width: 720,
     height: 1422,
     alt: "natalia and artemis",
-    image: "/usual_suspects/mobile/1.jpg",
+    image: "/usual_suspects/mobile/1.png",
   },
   {
     width: 720,
