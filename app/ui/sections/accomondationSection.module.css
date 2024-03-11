@@ -1,7 +1,7 @@
 .location_section {
   display: flex;
   flex-direction: column;
-  padding: 0 10%;
+  padding: 80px 10%;
   align-items: center;
 }
 
