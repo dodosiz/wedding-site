@@ -20,11 +20,11 @@ export function LocationSection() {
       <div className="text_container">
         <Header textAlign="center">{"Η Τοποθεσία"}</Header>
         <p>
-          Το μυστήριο θα τελεστεί στην{" "}
-          <strong>εκκλησία του Αγίου Νικολάου</strong> στην Ερμούπολη Σύρου.
+          Το μυστήριο θα τελεστεί στην<br/>
+          <strong>εκκλησία του Αγίου Νικολάου</strong><br/> στην Ερμούπολη Σύρου.
         </p>
         <p>
-          Στη συνέχεια θα κατευθυνθούμε στην <strong>villa 3 lagoons</strong>,
+          Στη συνέχεια θα κατευθυνθούμε στην<br/><strong>βίλλα 3 lagoons</strong><br/>
           όπου και θα πραγματοποιηθεί η γαμήλια δεξίωση.
         </p>
         <Link className={styles.rsvp_button} href="/rsvp">
