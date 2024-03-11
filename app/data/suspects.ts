@@ -31,6 +31,8 @@ export const SUSPECTS: Suspect[] = [
   {
     title: "Το βαπτιστήρι",
     subtitle: "τσουρεκάκι",
+    image: "/usual_suspects/artemis.jpg",
+    alt: "artemis",
     moto: "Υπεύθυνη ψυχαγωγίας και διατάραξης κοινής ησυχίας.",
   },
   {
@@ -51,20 +53,20 @@ export const SUSPECTS: Suspect[] = [
 
 export const SUSPECTS_MOBILE: SuspectMobile[] = [
   {
-    width: 1125,
-    height: 1288,
+    width: 720,
+    height: 625,
     alt: "theo",
     image: "/usual_suspects/mobile/0.png",
   },
   {
-    width: 1125,
-    height: 2436,
+    width: 720,
+    height: 1422,
     alt: "natalia and artemis",
-    image: "/usual_suspects/mobile/1.png",
+    image: "/usual_suspects/mobile/1.jpg",
   },
   {
-    width: 1125,
-    height: 2436,
+    width: 720,
+    height: 1559,
     alt: "noulis and alex",
     image: "/usual_suspects/mobile/2.png",
   },
