@@ -31,6 +31,7 @@
 
 .pin_link {
   width: 150px;
+  text-decoration: underline;
 }
 
 .church_mobile {

@@ -24,7 +24,7 @@ export function LocationSection() {
           <strong>εκκλησία του Αγίου Νικολάου</strong> στην Ερμούπολη Σύρου.
         </p>
         <p>
-          Στη συνέχεια θα κατευθυνθούμε στην <strong>βίλλα 3 lagoons</strong>,
+          Στη συνέχεια θα κατευθυνθούμε στην <strong>villa 3 lagoons</strong>,
           όπου και θα πραγματοποιηθεί η γαμήλια δεξίωση.
         </p>
         <Link className={styles.rsvp_button} href="/rsvp">
@@ -65,7 +65,7 @@ export function LocationSection() {
                 target="_blank"
                 className={styles.pin_link}
               >
-                Βίλλα 3 lagoons
+                Villa 3 lagoons
               </a>
             </div>
           </div>
