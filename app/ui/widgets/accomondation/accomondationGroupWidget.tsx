@@ -13,7 +13,7 @@ export function AccomondationGroupWidget({ group }: AccomondationGroupProps) {
         <ul>
           {group.items.map((item, index) => {
             return (
-              <li key={`item-${index}`}>
+              <li style={{fontSize: "0.9em"}} key={`item-${index}`}>
                 <a href={item.link} target="_blank">
                   {item.name}
                 </a>

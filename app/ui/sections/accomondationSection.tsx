@@ -28,6 +28,9 @@ export function AccomondationSection({ groups }: AccomondationSectionProps) {
           ))}
           <div></div>
         </div>
+        <p>
+          Θα θέλαμε να σας παρακαλέσουμε να κλείσετε τα καταλύματά σας στο νησί όσο πιο νωρίς γίνεται λόγω της υψηλής ζήτησης.
+        </p>
       </div>
     </div>
   );
