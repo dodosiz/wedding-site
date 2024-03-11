@@ -12,6 +12,7 @@ import { ACCOMONDATIONS } from "./data/accomondation";
 import { ATTRACTION_GROUPS } from "./data/attraction";
 import { FOOD_GROUPS } from "./data/food";
 import { SUSPECTS, SUSPECTS_MOBILE } from "./data/suspects";
+import { GiftSection } from "./ui/sections/giftSection";
 
 export default function Home() {
   const [active, setActive] = useState("home");
@@ -26,7 +27,8 @@ export default function Home() {
           { text: "Διαμονή", link: "accomondation" },
           { text: "Φαγητό", link: "food" },
           { text: "Αξιοθέατα", link: "attractions" },
-          { text: "Μετάβαση", link: "getThere" },
+          { text: "Δώρα", link: "gifts" },
+          { text: "Μετάβαση", link: "getThere" }
         ]}
       />
       <main>
@@ -44,6 +46,9 @@ export default function Home() {
         </Section>
         <Section id="attractions" setActiveNav={setActive}>
           <AttractionsSection groups={ATTRACTION_GROUPS} />
+        </Section>
+        <Section id="gifts" setActiveNav={setActive}>
+          <GiftSection />
         </Section>
         <Section id="getThere" setActiveNav={setActive}>
           <GetThereSection />

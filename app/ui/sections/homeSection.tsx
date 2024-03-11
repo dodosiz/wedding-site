@@ -31,7 +31,7 @@ export function HomeSection({ suspects, suspectsMobile }: HomeSectionProps) {
       } else {
         setCounter(counter + 1);
       }
-    }, 5000);
+    }, 3000);
     return () => clearInterval(interval);
   });
 

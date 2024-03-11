@@ -1,3 +1,7 @@
+.get_there_section {
+  background-color: #f7f5ed;
+}
+
 .grid_container {
   display: grid;
   grid-template-columns: 1fr 1fr;

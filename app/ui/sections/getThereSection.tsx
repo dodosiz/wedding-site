@@ -20,7 +20,7 @@ export function GetThereSection() {
     callback();
   };
   return (
-    <>
+    <div className={styles.get_there_section}>
       <Intro />
       <div className={styles.grid_container}>
         <TrasportationElement
@@ -39,6 +39,6 @@ export function GetThereSection() {
         />
         <div id="bottom"></div>
       </div>
-    </>
+    </div>
   );
 }
