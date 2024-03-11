@@ -61,6 +61,11 @@
   text-decoration: none;
 }
 
+.location_info {
+  width: 100%;
+  text-align: center;
+}
+
 @media only screen and (max-width: 480px) {
   .pin_link {
     top: 0;

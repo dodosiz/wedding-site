@@ -19,11 +19,11 @@ export function LocationSection() {
       </div>
       <div className="text_container">
         <Header textAlign="center">{"Η Τοποθεσία"}</Header>
-        <p>
+        <p className={styles.location_info}>
           Το μυστήριο θα τελεστεί στην<br/>
           <strong>εκκλησία του Αγίου Νικολάου</strong><br/> στην Ερμούπολη Σύρου.
         </p>
-        <p>
+        <p className={styles.location_info}>
           Στη συνέχεια θα κατευθυνθούμε στην<br/><strong>βίλλα 3 lagoons</strong><br/>
           όπου και θα πραγματοποιηθεί η γαμήλια δεξίωση.
         </p>
