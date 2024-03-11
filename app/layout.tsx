@@ -6,7 +6,8 @@ const sans = Source_Sans_3({ subsets: ["latin", "greek"] });
 
 export const metadata: Metadata = {
   title: "Theo + Natalia",
-  description: "Our wedding invitation",
+  description: "Προσκλητήριο γάμου",
+  abstract: "Σας προσκαλούμε στον γάμο μας, ο οποίος θα πραγματοποιηθεί στην Σύρο"
 };
 
 export default function RootLayout({
