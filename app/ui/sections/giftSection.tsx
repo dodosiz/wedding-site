@@ -18,7 +18,7 @@ export function GiftSection() {
           <p>
             Προαιρετική λίστα γάμου:
           </p>
-          <ul>
+          <ul className={styles.account}>
             <li>Πειραιώς: GR4001722520005252110485996 (ΠΑΠΑΣΤΟΙΤΣΗ ΝΑΤΑΛΙΑ)</li>
           </ul>
         </div>

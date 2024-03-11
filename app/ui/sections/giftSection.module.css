@@ -2,6 +2,11 @@
     width: 20vw;
 }
 
+.account {
+    list-style: none;
+    text-align: center;
+}
+
 @media only screen and (max-width: 480px) {
     .piggy {
         width: 40vw;
