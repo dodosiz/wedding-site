@@ -33,7 +33,7 @@ export function RsvpForm() {
         required
       />
       <TextInput
-        label="Αριθμός ατόμων"
+        label="Αριθμός επιπλέον ατόμων"
         name="number_of_people"
         required={willAttend === "yes"}
         disabled={willAttend !== "yes"}
