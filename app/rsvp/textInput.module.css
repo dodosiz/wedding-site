@@ -7,6 +7,12 @@
   display: block;
 }
 
+.input_label_disabled {
+  margin-bottom: 2px;
+  display: block;
+  color: rgba(170, 170, 170, 0.5);
+}
+
 .input {
   appearance: none;
   border: none;
@@ -17,6 +23,11 @@
   padding: 0.4em;
   width: 40vw;
   line-height: 1.5rem;
+}
+
+.input:disabled {
+  background: rgba(170, 170, 170, 0.5);
+  border-bottom: 0.2em solid rgba(170, 170, 170, 0.1);
 }
 
 @media only screen and (max-width: 480px) {

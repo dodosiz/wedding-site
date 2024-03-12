@@ -4,9 +4,10 @@ interface RadioProps {
   values: { value: string; label: string }[];
   name: string;
   required?: boolean;
+  onChange(v: string): void;
 }
 
-export function Radio({ values, name, required }: RadioProps) {
+export function Radio({ values, name, required, onChange }: RadioProps) {
   return (
     <div className={styles.input_group}>
       {values.map((v) => {
@@ -19,6 +20,7 @@ export function Radio({ values, name, required }: RadioProps) {
               id={v.value}
               name={name}
               value={v.value}
+              onChange={(e) => onChange(e.target.value)}
             />
             <label htmlFor={v.value}>{v.label}</label>
           </div>
