@@ -30,6 +30,9 @@ export function LocationSection() {
         <Link className={styles.rsvp_button} href="/rsvp">
           Δήλωσε Συμμετοχή
         </Link>
+        <p className={styles.deadline}>
+          Παρακαλούμε επιβεβαιώστε την παρουσία σας μέχρι την <strong>15η Απριλίου</strong> για να μας βοηθήσετε να οργανώσουμε την εκδήλωση μας.
+        </p>
         <div className={styles.location_pin_container}>
           <Image
             layout="responsive"
