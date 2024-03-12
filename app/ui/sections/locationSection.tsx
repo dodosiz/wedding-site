@@ -21,7 +21,7 @@ export function LocationSection() {
         <Header textAlign="center">{"Η Τοποθεσία"}</Header>
         <p className={styles.location_info}>
           Το μυστήριο θα τελεστεί στην<br/>
-          <strong>εκκλησία του Αγίου Νικολάου</strong><br/> στην Ερμούπολη Σύρου.
+          <strong>εκκλησία του Αγίου Νικολάου</strong><br/> στην Ερμούπολη Σύρου,<br /><strong>ώρα 18:00</strong>.
         </p>
         <p className={styles.location_info}>
           Στη συνέχεια θα κατευθυνθούμε στην<br/><strong>βίλλα 3 lagoons</strong><br/>

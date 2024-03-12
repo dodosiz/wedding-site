@@ -43,6 +43,8 @@ export function SaveTheDate({ topDesktop, topMobile }: SaveTheDateProps) {
           Κυριακή
           <br />
           28 Ιουλίου 2024
+          <br />
+          18:00
         </p>
         <p className={styles.timeline_place}>Ερμούπολη, Σύρος</p>
         <Link className={styles.rsvp_button} href="/rsvp">
@@ -57,6 +59,8 @@ export function SaveTheDate({ topDesktop, topMobile }: SaveTheDateProps) {
           Κυριακή
           <br />
           28 Ιουλίου 2024
+          <br />
+          18:00
         </p>
         <p className={styles.timeline_place}>Ερμούπολη, Σύρος</p>
         <Link className={styles.rsvp_button} href="/rsvp">
