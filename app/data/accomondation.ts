@@ -1,56 +1,91 @@
+import { LocalizedText } from "../lib/localization";
+
 export interface Accomondation {
-  name: string;
+  name: LocalizedText[];
   link: string;
 }
 
 export interface AccomondationGroup {
-  name: string;
+  name: LocalizedText[];
   items: Accomondation[];
 }
 
 export const ACCOMONDATIONS: AccomondationGroup[] = [
   {
-    name: "Ξενοδοχεία",
+    name: [
+      { lang: "el", text: "Ξενοδοχεία" },
+      { lang: "en", text: "Hotels" },
+    ],
     items: [
       {
-        name: "Wind Tales",
+        name: [
+          { lang: "el", text: "Wind Tales" },
+          { lang: "en", text: "Wind Tales" },
+        ],
         link: "https://www.booking.com/hotel/gr/syros-windurf-camp.en-gb.html",
       },
       {
-        name: "Shapes Luxury Suites",
+        name: [
+          { lang: "el", text: "Shapes Luxury Suites" },
+          { lang: "en", text: "Shapes Luxury Suites" },
+        ],
         link: "https://www.booking.com/hotel/gr/shapes-luxury-suites.en-gb.html",
       },
       {
-        name: "SYROS SOUL LUXURY SUITES",
+        name: [
+          { lang: "el", text: "SYROS SOUL LUXURY SUITES" },
+          { lang: "en", text: "SYROS SOUL LUXURY SUITES" },
+        ],
         link: "https://www.booking.com/hotel/gr/syros-soul-luxury-suites.en-gb.html",
       },
       {
-        name: "Electra Syros Boutique Hotel",
+        name: [
+          { lang: "el", text: "Electra Syros Boutique Hotel" },
+          { lang: "en", text: "Electra Syros Boutique Hotel" },
+        ],
         link: "https://www.booking.com/hotel/gr/helectra.en-gb.html",
       },
     ],
   },
   {
-    name: "Airbnb",
+    name: [
+      { lang: "el", text: "Airbnb" },
+      { lang: "en", text: "Airbnb" },
+    ],
     items: [
       {
-        name: "Dolce Syra",
+        name: [
+          { lang: "el", text: "Dolce Syra" },
+          { lang: "en", text: "Dolce Syra" },
+        ],
         link: "https://www.airbnb.gr/rooms/694057471202833154",
       },
       {
-        name: "Στούντιο Λουκουμάκι",
+        name: [
+          { lang: "el", text: "Στούντιο Λουκουμάκι" },
+          { lang: "en", text: "Studio Lukumaki" },
+        ],
         link: "https://www.airbnb.gr/rooms/27135651",
       },
       {
-        name: "Esperance Corner",
+        name: [
+          { lang: "el", text: "Esperance Corner" },
+          { lang: "en", text: "Esperance Corner" },
+        ],
         link: "https://www.airbnb.gr/rooms/34038217",
       },
       {
-        name: "Karma Suite 2",
+        name: [
+          { lang: "el", text: "Karma Suite 2" },
+          { lang: "en", text: "Karma Suite 2" },
+        ],
         link: "https://www.airbnb.gr/rooms/907685113310315988",
       },
       {
-        name: "Βίγια Μαρία Σύρος, Κρόκος",
+        name: [
+          { lang: "el", text: "Βίγια Μαρία Σύρος, Κρόκος" },
+          { lang: "en", text: "Bigia Maria Syros, Krokos" },
+        ],
         link: "https://www.airbnb.gr/rooms/630984939501554521",
       },
     ],

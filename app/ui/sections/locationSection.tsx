@@ -2,8 +2,9 @@ import Image from "next/image";
 import styles from "./locationSection.module.css";
 import { Header } from "../header";
 import Link from "next/link";
+import { SupportedLang, localize } from "@/app/lib/localization";
 
-export function LocationSection() {
+export function LocationSection({ lang }: { lang: SupportedLang }) {
   return (
     <>
       <div className={styles.location_image_container}>
@@ -18,20 +19,122 @@ export function LocationSection() {
         />
       </div>
       <div className="text_container">
-        <Header textAlign="center">{"Η Τοποθεσία"}</Header>
+        <Header textAlign="center">
+          {localize(
+            [
+              { lang: "el", text: "Η Τοποθεσία" },
+              { lang: "en", text: "The Location" },
+            ],
+            lang
+          )}
+        </Header>
         <p className={styles.location_info}>
-          Το μυστήριο θα τελεστεί στην<br/>
-          <strong>εκκλησία του Αγίου Νικολάου</strong><br/> στην Ερμούπολη Σύρου,<br /><strong>ώρα 18:00</strong>.
+          {localize(
+            [
+              { lang: "el", text: "Το μυστήριο θα τελεστεί στην" },
+              { lang: "en", text: "The ceremony will take place at" },
+            ],
+            lang
+          )}
+          <br />
+          <strong>
+            {localize(
+              [
+                { lang: "el", text: "εκκλησία του Αγίου Νικολάου" },
+                { lang: "en", text: "St. Nicholas Church" },
+              ],
+              lang
+            )}
+          </strong>
+          <br />
+          {localize(
+            [
+              { lang: "el", text: " στην Ερμούπολη Σύρου," },
+              { lang: "en", text: " in Ermoupoli, Syros," },
+            ],
+            lang
+          )}
+          <br />
+          <strong>
+            {localize(
+              [
+                { lang: "el", text: "ώρα 18:00" },
+                { lang: "en", text: "at 18:00" },
+              ],
+              lang
+            )}
+          </strong>
+          .
         </p>
         <p className={styles.location_info}>
-          Στη συνέχεια θα κατευθυνθούμε στην<br/><strong>βίλλα 3 lagoons</strong><br/>
-          όπου και θα πραγματοποιηθεί η γαμήλια δεξίωση.
+          {localize(
+            [
+              { lang: "el", text: "Στη συνέχεια θα κατευθυνθούμε στην" },
+              { lang: "en", text: "Afterwards, we will head to" },
+            ],
+            lang
+          )}
+          <br />
+          <strong>
+            {localize(
+              [
+                { lang: "el", text: "βίλλα 3 lagoons" },
+                { lang: "en", text: "Villa 3 Lagoons" },
+              ],
+              lang
+            )}
+          </strong>
+          <br />
+          {localize(
+            [
+              {
+                lang: "el",
+                text: "όπου και θα πραγματοποιηθεί η γαμήλια δεξίωση.",
+              },
+              { lang: "en", text: "where the wedding reception will be held." },
+            ],
+            lang
+          )}
         </p>
         <Link className={styles.rsvp_button} href="/rsvp">
-          Δήλωσε Συμμετοχή
+          {localize(
+            [
+              { lang: "el", text: "Δήλωσε Συμμετοχή" },
+              { lang: "en", text: "RSVP" },
+            ],
+            lang
+          )}
         </Link>
         <p className={styles.deadline}>
-          Παρακαλούμε επιβεβαιώστε την παρουσία σας μέχρι την <strong>15η Απριλίου</strong> για να μας βοηθήσετε να οργανώσουμε την εκδήλωση μας.
+          {localize(
+            [
+              {
+                lang: "el",
+                text: "Παρακαλούμε επιβεβαιώστε την παρουσία σας μέχρι την ",
+              },
+              { lang: "en", text: "Please confirm your attendance by " },
+            ],
+            lang
+          )}{" "}
+          <strong>
+            {localize(
+              [
+                { lang: "el", text: "15η Μαΐου" },
+                { lang: "en", text: "Mai 15th" },
+              ],
+              lang
+            )}
+          </strong>{" "}
+          {localize(
+            [
+              {
+                lang: "el",
+                text: " για να μας βοηθήσετε να οργανώσουμε την εκδήλωση μας.",
+              },
+              { lang: "en", text: " to help us organize our event." },
+            ],
+            lang
+          )}
         </p>
         <div className={styles.location_pin_container}>
           <Image
@@ -58,7 +161,16 @@ export function LocationSection() {
                 target="_blank"
                 className={styles.pin_link}
               >
-                Εκκλησία του Αγίου Νικολάου
+                {localize(
+                  [
+                    {
+                      lang: "el",
+                      text: " Εκκλησία του Αγίου Νικολάου",
+                    },
+                    { lang: "en", text: "St. Nicholas Church" },
+                  ],
+                  lang
+                )}
               </a>
             </div>
             <div className={styles.pins_grid}>

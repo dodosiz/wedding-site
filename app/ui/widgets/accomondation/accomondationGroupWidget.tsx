@@ -1,21 +1,26 @@
 import { AccomondationGroup } from "@/app/data/accomondation";
+import { SupportedLang, localize } from "@/app/lib/localization";
 
 interface AccomondationGroupProps {
   group: AccomondationGroup;
+  lang: SupportedLang;
 }
 
-export function AccomondationGroupWidget({ group }: AccomondationGroupProps) {
+export function AccomondationGroupWidget({
+  group,
+  lang,
+}: AccomondationGroupProps) {
   return (
     <>
       <div></div>
       <div>
-        <h2>{group.name}</h2>
+        <h2>{localize(group.name, lang)}</h2>
         <ul>
           {group.items.map((item, index) => {
             return (
-              <li style={{fontSize: "0.9em"}} key={`item-${index}`}>
+              <li style={{ fontSize: "0.9em" }} key={`item-${index}`}>
                 <a href={item.link} target="_blank">
-                  {item.name}
+                  {localize(item.name, lang)}
                 </a>
               </li>
             );

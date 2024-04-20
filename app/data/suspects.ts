@@ -1,9 +1,11 @@
+import { LocalizedText } from "../lib/localization";
+
 export interface Suspect {
-  title: string;
-  subtitle: string;
+  title: LocalizedText[];
+  subtitle: LocalizedText[];
   image?: string;
   alt?: string;
-  moto: string;
+  moto: LocalizedText[];
 }
 
 export interface SuspectMobile {
@@ -15,39 +17,102 @@ export interface SuspectMobile {
 
 export const SUSPECTS: Suspect[] = [
   {
-    title: "Ο γαμπρός",
-    subtitle: "προγραμματιστής",
+    title: [
+      { lang: "el", text: "Ο γαμπρός" },
+      { lang: "en", text: "The groom" },
+    ],
+    subtitle: [
+      { lang: "el", text: "προγραμματιστής" },
+      { lang: "en", text: "programmer" },
+    ],
     alt: "theo",
     image: "/usual_suspects/theo.jpg",
-    moto: "Full-stack προγραμματισμός πάρτυ.",
+    moto: [
+      { lang: "el", text: "Full-stack προγραμματισμός πάρτυ." },
+      { lang: "en", text: "Full-stack party development" },
+    ],
   },
   {
-    title: "Η νύφη",
-    subtitle: "αρχιτέκτονας",
+    title: [
+      { lang: "el", text: "Η νύφη" },
+      { lang: "en", text: "The bride" },
+    ],
+    subtitle: [
+      { lang: "el", text: "αρχιτέκτονας" },
+      { lang: "en", text: "architect" },
+    ],
     alt: "natalia",
     image: "/usual_suspects/natalia.jpg",
-    moto: "Σχεδιασμός και οργάνωση πάρτυ με γεωμετρική ακρίβεια.",
+    moto: [
+      {
+        lang: "el",
+        text: "Σχεδιασμός και οργάνωση πάρτυ με γεωμετρική ακρίβεια.",
+      },
+      {
+        lang: "en",
+        text: "Design and organize parties with geometric precision.",
+      },
+    ],
   },
   {
-    title: "Το βαπτιστήρι",
-    subtitle: "τσουρεκάκι",
+    title: [
+      { lang: "el", text: "Το βαπτιστήρι" },
+      { lang: "en", text: "The baby" },
+    ],
+    subtitle: [
+      { lang: "el", text: "τσουρεκάκι" },
+      { lang: "en", text: "cupcake" },
+    ],
     image: "/usual_suspects/artemis.jpg",
     alt: "artemis",
-    moto: "Υπεύθυνη ψυχαγωγίας και διατάραξης κοινής ησυχίας.",
+    moto: [
+      {
+        lang: "el",
+        text: "Υπεύθυνη ψυχαγωγίας και διατάραξης κοινής ησυχίας.",
+      },
+      {
+        lang: "en",
+        text: "Responsible for entertainment and disturbance of common peace.",
+      },
+    ],
   },
   {
-    title: "Η κουμπάρα",
-    subtitle: "σομελιέ",
-    moto: "Προμήθεια και διακίνηση αλκοόλ.",
+    title: [
+      { lang: "el", text: "Η κουμπάρα" },
+      { lang: "en", text: "The maid of honor" },
+    ],
+    subtitle: [
+      { lang: "el", text: "σομελιέ" },
+      { lang: "en", text: "sommelier" },
+    ],
+    moto: [
+      { lang: "el", text: "Προμήθεια και διακίνηση αλκοόλ." },
+      { lang: "en", text: "Supply and distribution of alcohol." },
+    ],
     image: "/usual_suspects/alex.jpg",
     alt: "alex",
   },
   {
-    title: "Ο νονός",
-    subtitle: "ψυχολόγος",
+    title: [
+      { lang: "el", text: "Ο νονός" },
+      { lang: "en", text: "The godfather" },
+    ],
+    subtitle: [
+      { lang: "el", text: "ψυχολόγος" },
+      { lang: "en", text: "psychologist" },
+    ],
     alt: "noulis",
     image: "/usual_suspects/noulis.jpg",
-    moto: "Αξιολόγηση και διάγνωση καταλληλότητας προσαρμογής σε πάρτυ.",
+    moto: [
+      {
+        lang: "el",
+        text: "Αξιολόγηση και διάγνωση καταλληλότητας προσαρμογής σε πάρτυ.",
+      },
+      {
+        lang: "en",
+        text: "Assessment and diagnosis of adaptability suitability for parties.",
+      },
+    ],
   },
 ];
 

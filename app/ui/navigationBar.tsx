@@ -2,9 +2,10 @@
 import styles from "./navigationBar.module.css";
 import "./mobileNavigationBar.css";
 import { useState } from "react";
+import { LocalizedText, SupportedLang, localize } from "../lib/localization";
 
 interface Item {
-  text: string;
+  texts: LocalizedText[];
   link: string;
 }
 
@@ -12,6 +13,7 @@ interface NavigationBarProps {
   active: string;
   setActive: (s: string) => void;
   items: Item[];
+  lang: SupportedLang;
 }
 
 export function NavigationBar(props: NavigationBarProps) {
@@ -35,7 +37,7 @@ export function NavigationBar(props: NavigationBarProps) {
                 i.link === props.active ? styles.active : undefined
               }`}
             >
-              {i.text}
+              {localize(i.texts, props.lang)}
             </li>
           ))}
         </ul>
@@ -61,7 +63,7 @@ export function NavigationBar(props: NavigationBarProps) {
                   i.link === props.active ? styles.active : undefined
                 }`}
               >
-                {i.text}
+                {localize(i.texts, props.lang)}
               </li>
             ))}
           </ul>

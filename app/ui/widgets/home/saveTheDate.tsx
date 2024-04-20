@@ -1,13 +1,15 @@
 import Image from "next/image";
 import styles from "./saveTheDate.module.css";
 import Link from "next/link";
+import { SupportedLang, localize } from "@/app/lib/localization";
 
 interface SaveTheDateProps {
   topDesktop: number;
   topMobile: number;
+  lang: SupportedLang;
 }
 
-export function SaveTheDate({ topDesktop, topMobile }: SaveTheDateProps) {
+export function SaveTheDate({ topDesktop, topMobile, lang }: SaveTheDateProps) {
   return (
     <div className={styles.save_the_date_grid}>
       <div></div>
@@ -39,14 +41,7 @@ export function SaveTheDate({ topDesktop, topMobile }: SaveTheDateProps) {
         className={styles.save_the_date_text}
         style={{ opacity: `${100 - topDesktop}%` }}
       >
-        <p className={styles.timeline_date}>
-          Κυριακή
-          <br />
-          28 Ιουλίου 2024
-          <br />
-          <span>Ώρα 18:00</span>
-        </p>
-        <p>Ερμούπολη, Σύρος</p>
+        <TimelineDate lang={lang} />
         <Link className={styles.rsvp_button} href="/rsvp">
           RSVP
         </Link>
@@ -55,14 +50,7 @@ export function SaveTheDate({ topDesktop, topMobile }: SaveTheDateProps) {
         className={styles.save_the_date_text_mobile}
         style={{ opacity: `${100 - topMobile}%` }}
       >
-        <p className={styles.timeline_date}>
-          Κυριακή
-          <br />
-          <span>28 Ιουλίου 2024</span>
-          <br />
-          <span>Ώρα 18:00</span>
-        </p>
-        <p>Ερμούπολη, Σύρος</p>
+        <TimelineDate lang={lang} />
         <Link className={styles.rsvp_button} href="/rsvp">
           RSVP
         </Link>
@@ -91,5 +79,48 @@ export function SaveTheDate({ topDesktop, topMobile }: SaveTheDateProps) {
       </div>
       <div></div>
     </div>
+  );
+}
+
+function TimelineDate({ lang }: { lang: SupportedLang }) {
+  return (
+    <>
+      <p className={styles.timeline_date}>
+        {localize(
+          [
+            { lang: "el", text: "Κυριακή" },
+            { lang: "en", text: "Sunday" },
+          ],
+          lang
+        )}
+        <br />
+        {localize(
+          [
+            { lang: "el", text: "28 Ιουλίου 2024" },
+            { lang: "en", text: "The 28th of July" },
+          ],
+          lang
+        )}
+        <br />
+        <span>
+          {localize(
+            [
+              { lang: "el", text: "Ώρα 18:00" },
+              { lang: "en", text: "At 18:00" },
+            ],
+            lang
+          )}
+        </span>
+      </p>
+      <p>
+        {localize(
+          [
+            { lang: "el", text: "Ερμούπολη, Σύρος" },
+            { lang: "en", text: "Ermoupoli, Syros" },
+          ],
+          lang
+        )}
+      </p>
+    </>
   );
 }

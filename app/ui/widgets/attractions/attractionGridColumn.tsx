@@ -1,12 +1,14 @@
 import { Attraction } from "@/app/data/attraction";
 import Image from "next/image";
 import styles from "./attractionGridColumn.module.css";
+import { SupportedLang, localize } from "@/app/lib/localization";
 
 interface AttractionGridColumnProps {
   attractions: Attraction[];
   withGap?: boolean;
   hovered: number | undefined;
   setHovered(n: number | undefined): void;
+  lang: SupportedLang;
 }
 
 export function AttractionGridColumn(props: AttractionGridColumnProps) {
@@ -48,7 +50,7 @@ export function AttractionGridColumn(props: AttractionGridColumnProps) {
               layout="responsive"
             />
             <a href={attraction.link} target="_blank" className={styles.text}>
-              {attraction.text}
+              {localize(attraction.text, props.lang)}
             </a>
           </div>
         );

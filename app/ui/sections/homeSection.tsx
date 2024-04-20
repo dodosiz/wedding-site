@@ -7,13 +7,19 @@ import { Suspect, SuspectMobile } from "@/app/data/suspects";
 import { SuspectWidget } from "../widgets/home/suspectWidget";
 import { SaveTheDate } from "../widgets/home/saveTheDate";
 import { Timeline } from "../widgets/home/timeline";
+import { SupportedLang } from "@/app/lib/localization";
 
 interface HomeSectionProps {
   suspects: Suspect[];
   suspectsMobile: SuspectMobile[];
+  lang: SupportedLang;
 }
 
-export function HomeSection({ suspects, suspectsMobile }: HomeSectionProps) {
+export function HomeSection({
+  suspects,
+  suspectsMobile,
+  lang,
+}: HomeSectionProps) {
   const DESKTOP_OFFSET = 500;
   const MOBILE_OFFSET = 100;
   const MOBILE_TOP_OFFSET = 40;
@@ -103,7 +109,11 @@ export function HomeSection({ suspects, suspectsMobile }: HomeSectionProps) {
         </div>
       </div>
       <div className={styles.home_text_container}>
-        <SaveTheDate topDesktop={topDesktop} topMobile={topMobile} />
+        <SaveTheDate
+          topDesktop={topDesktop}
+          topMobile={topMobile}
+          lang={lang}
+        />
         <Timeline
           topTimelineDesktop={topTimelineDesktop}
           topTimelineMobile={topTimelineMobile}
@@ -117,7 +127,11 @@ export function HomeSection({ suspects, suspectsMobile }: HomeSectionProps) {
         </Header>
         <div className={styles.suspects_grid}>
           {suspects.map((suspect, index) => (
-            <SuspectWidget suspect={suspect} key={`suspect-${index}`} />
+            <SuspectWidget
+              suspect={suspect}
+              key={`suspect-${index}`}
+              lang={lang}
+            />
           ))}
         </div>
         <div className={styles.suspects_mobile}>

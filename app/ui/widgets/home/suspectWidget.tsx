@@ -2,18 +2,20 @@ import { Suspect } from "@/app/data/suspects";
 import { Header } from "../../header";
 import Image from "next/image";
 import styles from "./suspectWidget.module.css";
+import { SupportedLang, localize } from "@/app/lib/localization";
 
 interface SuspectWidgetProps {
   suspect: Suspect;
+  lang: SupportedLang;
 }
 
-export function SuspectWidget({ suspect }: SuspectWidgetProps) {
+export function SuspectWidget({ suspect, lang }: SuspectWidgetProps) {
   return (
     <div className={styles.suspects_grid_item}>
       <Header textAlign="center" level={3}>
-        {suspect.title}
+        {localize(suspect.title, lang)}
         <br />
-        {suspect.subtitle}
+        {localize(suspect.subtitle, lang)}
       </Header>
       {suspect.image && suspect.alt ? (
         <Image
@@ -26,7 +28,7 @@ export function SuspectWidget({ suspect }: SuspectWidgetProps) {
       ) : (
         <div className={styles.suspects_grid_box}></div>
       )}
-      <p>{suspect.moto}</p>
+      <p>{localize(suspect.moto, lang)}</p>
     </div>
   );
 }
