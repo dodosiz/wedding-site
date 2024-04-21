@@ -129,7 +129,7 @@ export const FOOD_GROUPS: RestaurantGroup[] = [
             link: "https://www.tripadvisor.com.gr/Restaurant_Review-g1184009-d2194506-Reviews-Iliovasilema-Galissas_Syros_Cyclades_South_Aegean.html",
             name: [
               { lang: "el", text: "ηλιοβασίλεμα" },
-              { lang: "en", text: "iliovasilema" },
+              { lang: "en", text: "Iliovasilema" },
             ],
             description: [
               { lang: "el", text: "Σύρος" },

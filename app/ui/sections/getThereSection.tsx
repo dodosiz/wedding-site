@@ -3,8 +3,9 @@ import { useState } from "react";
 import { PLANE, SHIP } from "@/app/data/transportation";
 import { TrasportationElement } from "../widgets/transportation/transportationElement";
 import { Intro } from "../widgets/transportation/intro";
+import { SupportedLang } from "@/app/lib/localization";
 
-export function GetThereSection() {
+export function GetThereSection({ lang }: { lang: SupportedLang }) {
   const [showShip, setShowShip] = useState(false);
   const [showPlane, setShowPlane] = useState(false);
   const getClassName = (show: boolean) => {
@@ -21,7 +22,7 @@ export function GetThereSection() {
   };
   return (
     <div className={styles.get_there_section}>
-      <Intro />
+      <Intro lang={lang} />
       <div className={styles.grid_container}>
         <TrasportationElement
           getClassName={getClassName}
@@ -29,6 +30,7 @@ export function GetThereSection() {
           setShow={setShowShip}
           show={showShip}
           transportation={SHIP}
+          lang={lang}
         />
         <TrasportationElement
           getClassName={getClassName}
@@ -36,6 +38,7 @@ export function GetThereSection() {
           setShow={setShowPlane}
           show={showPlane}
           transportation={PLANE}
+          lang={lang}
         />
         <div id="bottom"></div>
       </div>

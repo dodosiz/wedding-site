@@ -97,10 +97,10 @@ export default function Home({ lang }: { lang: SupportedLang }) {
           <AttractionsSection groups={ATTRACTION_GROUPS} lang={lang} />
         </Section>
         <Section id="gifts" setActiveNav={setActive}>
-          <GiftSection />
+          <GiftSection lang={lang} />
         </Section>
         <Section id="getThere" setActiveNav={setActive}>
-          <GetThereSection />
+          <GetThereSection lang={lang} />
         </Section>
       </main>
     </>

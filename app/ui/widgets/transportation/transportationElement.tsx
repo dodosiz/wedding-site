@@ -2,6 +2,7 @@ import { Transportation } from "@/app/data/transportation";
 import { ChevronRightIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 import styles from "./transportationElement.module.css";
 import Image from "next/image";
+import { SupportedLang, localize } from "@/app/lib/localization";
 
 interface TransportationProps {
   transportation: Transportation;
@@ -9,6 +10,7 @@ interface TransportationProps {
   handleClick(input: boolean, callback: () => void): void;
   setShow(b: boolean): void;
   getClassName(b: boolean): string;
+  lang: SupportedLang;
 }
 
 export function TrasportationElement({
@@ -17,6 +19,7 @@ export function TrasportationElement({
   handleClick,
   setShow,
   getClassName,
+  lang,
 }: TransportationProps) {
   return (
     <div>
@@ -35,7 +38,7 @@ export function TrasportationElement({
             })
           }
         >
-          {transportation.title}{" "}
+          {localize(transportation.title, lang)}{" "}
           {show ? (
             <ChevronDownIcon style={{ width: "15px" }} />
           ) : (
@@ -43,10 +46,12 @@ export function TrasportationElement({
           )}
         </h2>
       </div>
-      <p className={getClassName(show)}>{transportation.description}</p>
+      <p className={getClassName(show)}>
+        {localize(transportation.description, lang)}
+      </p>
       {transportation.contacts.map((contact, index) => (
         <p key={`contact-${index}`} className={getClassName(show)}>
-          <b>{contact.name}:</b> {contact.telephone}
+          <b>{localize(contact.name, lang)}:</b> {contact.telephone}
         </p>
       ))}
     </div>
