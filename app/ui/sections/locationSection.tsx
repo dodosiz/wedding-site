@@ -96,7 +96,7 @@ export function LocationSection({ lang }: { lang: SupportedLang }) {
             lang
           )}
         </p>
-        <Link className={styles.rsvp_button} href="/rsvp">
+        <Link className={styles.rsvp_button} href={`/${lang}/rsvp`}>
           {localize(
             [
               { lang: "el", text: "Δήλωσε Συμμετοχή" },

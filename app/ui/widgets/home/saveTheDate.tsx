@@ -42,7 +42,7 @@ export function SaveTheDate({ topDesktop, topMobile, lang }: SaveTheDateProps) {
         style={{ opacity: `${100 - topDesktop}%` }}
       >
         <TimelineDate lang={lang} />
-        <Link className={styles.rsvp_button} href="/rsvp">
+        <Link className={styles.rsvp_button} href={`/${lang}/rsvp`}>
           RSVP
         </Link>
       </div>
@@ -51,7 +51,7 @@ export function SaveTheDate({ topDesktop, topMobile, lang }: SaveTheDateProps) {
         style={{ opacity: `${100 - topMobile}%` }}
       >
         <TimelineDate lang={lang} />
-        <Link className={styles.rsvp_button} href="/rsvp">
+        <Link className={styles.rsvp_button} href={`/${lang}/rsvp`}>
           RSVP
         </Link>
       </div>
